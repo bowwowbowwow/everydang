@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 이 문서는 mybatis에서 처리할 SQL문을 작성하는 문서입니다. -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+       "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="wish">
+	<insert id="updateWish" parameterType="wishVO">
+		insert wishlist values(#{mm_id},#{pr_code},#{ws_like});
+	</insert>
+	
+	<select id="selectWish" parameterType="Map" resultType="wishVO">
+		select * from wishlist where mm_id = #{mm_id} and pr_code = #{pr_code}
+	</select>
+	
+	<select id="selectAllWish" parameterType="String" resultType="wishVO">
+		select * from wishlist where mm_id = #{mm_id}
+	</select>
+	
+	<insert id="insertWish" parameterType="wishVO">
+		insert into wishlist(mm_id,pr_code,ws_like) values(#{mm_id},#{pr_code},1)
+	</insert>
+	
+	<delete id="deleteWish" parameterType="Map">
+		delete from wishlist where mm_id = #{mm_id} and pr_code = #{pr_code}
+	</delete>
+	
+	<delete id="deleteWishById">
+		delete from wishlist where mm_id = #{mm_id}
+	</delete>
+</mapper>
+
+

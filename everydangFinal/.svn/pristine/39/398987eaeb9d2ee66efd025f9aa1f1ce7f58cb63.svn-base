@@ -1,0 +1,122 @@
+package com.everydang.vo;
+
+public class PostVO {
+	private String ps_no;
+	private String br_code;
+	private String mm_id;
+	private String ps_subject;
+	private String ps_content;
+	private String ps_file;
+	private String ps_url;
+	private String ps_date;
+	private int ps_noti;
+	private String ps_thumbnail;
+	private String ps_sido;
+	private String ps_gugun;
+	private String ps_tag;
+
+	public String getPs_no() {
+		return ps_no;
+	}
+
+	public void setPs_no(String ps_no) {
+		this.ps_no = ps_no;
+	}
+
+	public String getBr_code() {
+		return br_code;
+	}
+
+	public void setBr_code(String br_code) {
+		this.br_code = br_code;
+	}
+
+	public String getMm_id() {
+		return mm_id;
+	}
+
+	public void setMm_id(String mm_id) {
+		this.mm_id = mm_id;
+	}
+
+	public String getPs_subject() {
+		return ps_subject;
+	}
+
+	public void setPs_subject(String ps_subject) {
+		this.ps_subject = ps_subject;
+	}
+
+	public String getPs_content() {
+		return ps_content;
+	}
+
+	public void setPs_content(String ps_content) {
+		this.ps_content = ps_content;
+	}
+
+	public String getPs_file() {
+		return ps_file;
+	}
+
+	public void setPs_file(String ps_file) {
+		this.ps_file = ps_file;
+	}
+
+	public String getPs_url() {
+		return ps_url;
+	}
+
+	public void setPs_url(String ps_url) {
+		this.ps_url = ps_url;
+	}
+
+	public String getPs_date() {
+		return ps_date;
+	}
+
+	public void setPs_date(String ps_date) {
+		this.ps_date = ps_date;
+	}
+
+	public int getPs_noti() {
+		return ps_noti;
+	}
+
+	public void setPs_noti(int ps_noti) {
+		this.ps_noti = ps_noti;
+	}
+
+	public String getPs_thumbnail() {
+		return ps_thumbnail;
+	}
+
+	public void setPs_thumbnail(String ps_thumbnail) {
+		this.ps_thumbnail = ps_thumbnail;
+	}
+
+	public String getPs_sido() {
+		return ps_sido;
+	}
+
+	public void setPs_sido(String ps_sido) {
+		this.ps_sido = ps_sido;
+	}
+
+	public String getPs_gugun() {
+		return ps_gugun;
+	}
+
+	public void setPs_gugun(String ps_gugun) {
+		this.ps_gugun = ps_gugun;
+	}
+
+	public String getPs_tag() {
+		return ps_tag;
+	}
+
+	public void setPs_tag(String ps_tag) {
+		this.ps_tag = ps_tag;
+	}
+
+}

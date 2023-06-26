@@ -1,0 +1,16 @@
+package com.everydang.member.sevice;
+
+import com.everydang.vo.MemberVO;
+
+public interface IMemberService {
+	
+	//회원 정보
+	public int insertJoinInformation(MemberVO membervo);
+	
+	//아이디 중복
+	public String selectCheckId(String id);
+	
+	//닉네임 중복
+	public String selectcheckNickname(String nickname);
+
+}

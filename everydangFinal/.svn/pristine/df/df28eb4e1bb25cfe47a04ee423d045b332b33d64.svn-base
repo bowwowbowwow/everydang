@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPageMain</title>
+    <link rel="stylesheet" href="../../../css/myPage/myPageMain.css">
+    <script src="../../../js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="myProfile">
+            <div id="profileDetail">
+                <img src="../../../image/user-profile/icon-user-profile4.png" alt="">
+                <span id="level">정</span>
+                <span id="nickName">애블댕</span>
+            </div>
+        </div>
+        <div id="container">
+            <nav id="menu">
+                <h3 class="menuTitle">마이페이지</h3>
+                <ul id="mypage">
+                    <li><a href="#">회원정보 확인/수정</a></li>
+                    <li><a href="#">my 쪽지</a></li>
+                </ul>
+                <h3 class="menuTitle">내 활동</h3>
+                <ul id="myactivity">
+                    <li><a href="#">my 글</a></li>
+                    <li><a href="#">my 댓글</a></li>
+                    <li><a href="#">스크랩</a></li>
+                </ul>
+                <h3 class="menuTitle">내 쇼핑</h3>
+                <ul id="myactivity">
+                    <li><a href="#">my 주문</a></li>
+                    <li><a href="#">my 리뷰</a></li>
+                </ul>
+                <a href="#">
+                    <i>
+                        <img src="../../../image/icon/icon-question.png" alt="question"> <span>자주 묻는 질문</span>
+                    </i>
+                </a>
+                <a href="#">
+                    <i>
+                        <img src="../../../image/icon/icon-logout.png" alt="logout"> <span>로그아웃</span>
+                    </i>
+                </a>
+            </nav>
+            <div id="myActivities">
+                <h2 id="activityTitle">내 활동</h2>
+                <div id="activities">
+                    <div id="write" class="a">
+                        <img src="../../../image/icon/icon-document.png" alt="document">
+                        <span>내가 쓴 글</span>
+                        <div class="select">
+                            <a href="#">8</a>
+                            <span>개</span>
+                        </div>
+                    </div>
+                    <div id="comment" class="a">
+                        <img src="../../../image/icon/icon-comment.png" alt="comment">
+                        <span>내가 쓴 댓글</span>
+                        <div class="select">
+                            <a href="#">20</a>
+                            <span>개</span>
+                        </div>
+                    </div>
+                    <div id="scrap" class="a">
+                        <img src="../../../image/icon/icon-collect.png" alt="scrap">
+                        <span>스크랩</span>
+                        <div class="select">
+                            <a href="#">100</a>
+                            <span>개</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner">
+                    <a href="#">
+                        <img src="../../../image/sub/mypage/banner.png" alt="banner">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("../../../header.html");
+        $("#footer").load("../../../footer.html");
+    </script>
+</body>
+</html>

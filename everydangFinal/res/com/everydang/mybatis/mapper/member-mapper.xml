@@ -1,0 +1,193 @@
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<!-- 회원가입 -->
+
+	<!-- 회원 정보 입력 -->
+	<insert id="insertJoinInformation" parameterType="memberVO">
+		insert into
+		member (mm_id, mm_password, mm_nickname, mm_name, mm_mail,
+		mm_tel,
+		mm_zip, mm_addr1, mm_addr2, mm_profile, gr_no, mm_join_date)
+		values (
+		#{mm_id}, #{mm_password}, #{mm_nickname}, #{mm_name}, #{mm_mail},
+		#{mm_tel},
+		#{mm_zip}, #{mm_addr1}, #{mm_addr2}, 'filepath', 0, sysdate)
+	</insert>
+
+	<!-- 아이디 중복 확인 -->
+	<select id="selectCheckId" resultType="String"
+		parameterType="String">
+		select mm_id from member where mm_id = #{data}
+	</select>
+
+	<!-- 닉네임 중복 확인 -->
+	<select id="selectcheckNickname" resultType="String"
+		parameterType="String">
+		select mm_nickname from member where mm_nickname =
+		#{data}
+	</select>
+
+
+	<!-- 로그인, 관리자 로그인 -->
+	<select id="selectLogin" parameterType="Map" resultType="String">
+		select
+		gr_no
+		from member
+		where mm_id = #{mm_id} and mm_password =
+		#{mm_password}
+	</select>
+
+
+	<!-- 아이디 찾기 -->
+	<select id="selectFindId" parameterType="Map"
+		resultType="memberVO">
+		select * from member
+		where mm_name= #{mm_name} and mm_mail=
+		#{mm_mail}
+	</select>
+
+	<!-- 비밀번호 찾기 -->
+	<select id="selectFindPassword" parameterType="Map"
+		resultType="memberVO">
+		select * from member
+		where mm_id= #{mm_id} and mm_mail=
+		#{mm_mail}
+	</select>
+
+
+	<!-- 마이페이지 -->
+
+	<!-- my 글 -->
+
+	<select id="selectMyPost" parameterType="String"
+		resultType="memberVO">
+		select
+		ps_subject,
+		ps_date,
+		ps_content,
+		ps_no, (select gr_no
+		from member m where m.mm_id = p.mm_id) gr_no
+		from post p
+		where mm_id =
+		#{data}
+	</select>
+
+
+	<!-- my 글 삭제 -->
+	<delete id="deleteMyPost" parameterType="String">
+		delete from post where
+		ps_no = #{ps_no}
+	</delete>
+	<delete id="deleteLikeOfMyPost" parameterType="String">
+		delete from "LIKE"
+		where ps_no = #{ps_no}
+	</delete>
+	<delete id="deleteScrapOfMyPost" parameterType="String">
+		delete from scrap
+		where ps_no = #{ps_no}
+	</delete>
+	<delete id="deleteCommentOfMyPost" parameterType="String">
+		delete from
+		"COMMENT" where ps_no = #{ps_no}
+	</delete>
+
+	<!-- my 댓글 -->
+	<select id="selectMyComment" parameterType="String"
+		resultType="commentVO">
+		SELECT cm_content, cm_date,
+		(SELECT ps_subject FROM POST p
+		WHERE p.ps_no = c.ps_no) PS_SUBJECT,
+		(SELECT br_name FROM POST p, BOARD
+		b WHERE p.br_code = b.br_code AND p.ps_no
+		= c.PS_NO) br_name,
+		ps_no,
+		cm_no
+		FROM "COMMENT" c
+		WHERE mm_id = #{mm_id}
+	</select>
+
+	<select id="selectMyInfo" parameterType="String"
+		resultType="commentVO">
+		select (select gr_name from grade g where g.mm_id =
+		m.mm_id) gr_name, mm_nickname from member m where mm_id = #{mm_id}
+	</select>
+
+	<delete id="deleteMyComment" parameterType="String">
+		delete from "COMMENT"
+		where cm_no = #{cm_no}
+	</delete>
+
+	<!-- my 스크랩 -->
+	<select id="selectMyScrap" parameterType="String"
+		resultType="myScrapVO">
+		select
+		s.ps_no,
+		(select mm_nickname from member m where m.mm_id = p.mm_id) mm_nickname,
+		p.ps_subject,
+		p.ps_date,
+		p.ps_content,
+		(select mm_profile from member m where m.mm_id = p.mm_id) mm_profile
+		from
+		scrap s, post p
+		where
+		s.mm_id = #{mm_id} and
+		p.ps_no = s.ps_no
+	</select>
+
+	<select id="selectAllPostById" resultType="postVO"
+		parameterType="String">
+		select mm_id,PS_NO, BR_CODE, MM_ID, PS_SUBJECT,
+		PS_CONTENT, PS_DATE,
+		(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id =
+		p.mm_id) mm_nickname,
+		(Select mm_profile from member m where m.mm_id = p.mm_id) mm_profile,
+		(select
+		gr_no from member m where m.mm_id = p.mm_id) gr_no
+		from post p
+		where
+		mm_id = #{mm_id}
+	</select>
+
+	<insert id="insertReportMember" parameterType="reportVO">
+		INSERT INTO report
+		VALUES (#{rp_reporter}, #{rp_defendent}, #{rp_reason1}, #{rp_reason2},
+		0, sysdate, #{rp_file}, REPORT_SEQ.nextval)
+	</insert>
+
+	<select id="selectMemberPostCount" parameterType="Map"
+		resultType="int">
+		SELECT COUNT(*) FROM ${tableName} WHERE mm_id = #{mm_id}
+	</select>
+
+	<select id="selectMemberInfo" parameterType="String"
+		resultType="memberVO">
+		SELECT * FROM member WHERE mm_id = #{mm_id}
+	</select>
+
+	<update id="updateMemberInfo" parameterType="memberVO">
+		UPDATE member
+		SET
+		mm_name = #{mm_name}, mm_nickname = #{mm_nickname}, mm_mail =
+		#{mm_mail}, mm_tel = #{mm_tel}, mm_zip = #{mm_zip}, mm_addr1 =
+		#{mm_addr1}, mm_addr2 = #{mm_addr2}, mm_profile = #{mm_profile}
+		WHERE
+		mm_id = #{mm_id}
+	</update>
+
+	<delete id="deleteMemberInfo" parameterType="String">
+		{call declare
+		begin
+		DELETE FROM "LIKE" WHERE mm_id = #{mm_id};
+		DELETE FROM "COMMENT" WHERE mm_id = #{mm_id};
+		DELETE FROM SCRAP WHERE mm_id = #{mm_id};
+		DELETE FROM POST WHERE mm_id = #{mm_id};
+		DELETE FROM member WHERE mm_id = #{mm_id};
+		end
+		}
+	</delete>
+
+</mapper>

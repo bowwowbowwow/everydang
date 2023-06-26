@@ -1,0 +1,136 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<title>댕근마켓 | 커뮤니티</title>
+<link rel="icon" href="/everydang/assets/favicon.ico">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/board/listBoard.css">
+<script src="<%=request.getContextPath() %>/js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div id="wrap" class="market">
+		<div id="container">
+			<div id="siteMapBox">
+				<div id="siteMap">
+					<a href="<%=request.getContextPath() %>/index.jsp"><img
+						src="<%=request.getContextPath() %>/image/icon/icon-home-blue.png" alt="icon-home-blue.png"
+						id="home"></a> <img src="<%=request.getContextPath() %>/image/icon/icon-arrow-right.png"
+						alt="icon-arrow-right.png" class="arrow"> <a
+						href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp" class="siteMapBoard">COMMUNITY</a> <img
+						src="<%=request.getContextPath() %>/image/icon/icon-arrow-right.png"
+						alt="icon-arrow-right.png" class="arrow"> <a
+						href="<%=request.getContextPath() %>/sub/board/marketBoard.jsp" class="siteMapBoard">댕근마켓</a>
+				</div>
+			</div>
+			<p id="superBoard">
+				<a href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp">COMMUNITY</a>
+			</p>
+			<div id="subBoardBox">
+				<div id="subBoard">
+					<a href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp" class="board">
+                        멍멍게시판
+                    </a>
+                    <a href="<%=request.getContextPath() %>/sub/board/boastBoard.jsp" class="board">
+                        댕주접
+                    </a>
+                    <a href="<%=request.getContextPath() %>/sub/board/marketBoard.jsp" class="board  selected">
+                        댕근마켓
+                    </a>
+				</div>
+			</div>
+			<div id="postListBox">
+				<div id="postList">
+					<div id="writeSort">
+						<a href="wikiWrite.jsp" id="writeButton">
+                            <img src="<%=request.getContextPath() %>/image/icon/icon-edit-blue.png" alt="icon-edit.png" id="writeIcon" />
+                            작성하기
+                        </a>
+						<select name="sort" id="sort">
+							<option value="dateSort" id="dateSort" selected>날짜순</option>
+							<option value="likeSort" id="likeSort">좋아요순</option>
+							<option value="commentSort" id="commentSort">댓글순</option>
+						</select>
+					</div>
+					<div id="post">
+						<div class="announcePost">
+							<div class="writerDate">
+								<a href="#" class="writer">에브리댕 매니저</a>
+								<p class="date">2023-05-24</p>
+							</div>
+							<div class="contents">
+								<p class="pSubject">
+									<a href="#" class="subject">[공지사항] 서비스 안정화 작업으로 인한 다운타임 공지</a>
+								</p>
+								<p class="pContent">
+									<a href="#" class="content">인생의 봄바람을 내려온 기관과 군영과 이상의 인생에 옷을
+										반짝이는 사막이다. 유소년에게서 우리 간에 따뜻한 청춘을 어디 천지는 관 현악이며, 봄바람이다. 이상은 같은
+										가는 찾아다녀도, 그것은 앞이 하였으며, 붙잡아 것이다. 않는 고동을 원질이 청춘의 봄바람이다. 더 운지라 청춘
+										가치를 그러므로 발휘하기 얼마나 이상, 위하여서...</a>
+								</p>
+							</div>
+						</div>
+						<div class="normalPost">
+							<div class="writerDate">
+								<a href="#" class="writer">시고르자브종</a>
+								<p class="date">2023-05-24</p>
+							</div>
+							<div class="contentBox">
+								<div class="contents">
+									<p class="pSubject">
+										<a href="<%=request.getContextPath() %>/sub/board/bowwowRead.jsp" class="subject">이불'만'물어뜯는 강아지
+											따로자야할까요</a>
+									</p>
+									<p class="pContent">
+										<a href="<%=request.getContextPath() %>/sub/board/bowwowRead.jsp" class="content">인생의 봄바람을 내려온
+											기관과 군영과 이상의 인생에 옷을 반짝이는 사막이다. 유소년에게서 우리 간에 따뜻한 청춘을 어디 천지는 관
+											현악이며, 봄바람이다. 이상은 같은 가는 찾아다녀도, 그것은 앞이 하였으며, 붙잡아 것이다. 않는 고동을
+											원질이 청춘의 봄바람이다. 더 운지라 청춘 가치를 그러므로 발휘하기 얼마나 이상, 위하여서...</a>
+									</p>
+								</div>
+								<div class="likeCommentBox">
+									<div class="likeComment">
+										<img src="<%=request.getContextPath() %>/image/icon/icon-like-on.png"
+											alt="icon-like-on.png" class="like"><span
+											class="countLike">14</span> <img
+											src="<%=request.getContextPath() %>/image/icon/icon-comment-black.png"
+											alt="icon-comment-black.png" class="comment"><span
+											class="countComment">13</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-label="Page navigation example" class="page">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link" href="#"><img
+								src="<%=request.getContextPath() %>/image/icon/icon-arrow-prev.png"
+								alt="icon-arrow-prev.png" id="prev"></a></li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#"><img
+								src="<%=request.getContextPath() %>/image/icon/icon-arrow-next.png"
+								alt="icon-arrow-next.png" id="next"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+	<script>
+		$(function() {
+			$("#header").load("<%=request.getContextPath() %>/header.jsp");
+			$("#footer").load("<%=request.getContextPath() %>/footer.jsp");
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<%@page import="com.everydang.vo.BoardVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>검색 | 에브리댕</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/search/searchResult.css">
+    <script src="<%=request.getContextPath() %>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <div id="siteMapBox">
+                <!-- 공간만 차지 -->
+            </div>
+            <p id="superBoard"><a href="<%=request.getContextPath() %>/wikiBoard.jsp">SEARCH</a></p>
+
+            <div id="postListBox" class="searchListBox">
+                <div id="postList">
+                    <div class="writeSort">
+                        <div class="searchResultSummary">
+                            <p class="search-info">
+                                <span class="keyword">강아지</span> 전체게시판 검색결과
+                                (총 <span id="board-count" class="count">00</span>건) 
+                            </p>
+                            <a href="<% request.getContextPath(); %> + /searchPost.do" class="more">더보기</a>
+                        </div>
+                    </div>
+                    <%
+                    	List<BoardVO> searchList = (List<BoardVO>) request.getAttribute("SearchPostList");
+                    	for(int i = 0; i < 5; i++){
+                    		BoardVO vo = searchList.get(i);
+                    %>
+                    <div id="post">
+                        <div class="normalPost" id="normalPost1">
+                            <div id="writerDate">
+                                <a href="#" id="writer"><%= vo.getMm_nickname()  %></a>
+                                <p id="date"><%=vo.getPs_date() %></p>
+                            </div>
+                            <div id="contentBox">
+                                <div id="contents">
+                                    <a href="#">
+                                    <p id="pSubject"><%= vo.getPs_subject() %> 
+                                    </p>
+                                    <p id="pContent"><%=vo.getPs_content() %></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% 
+                   		 }
+                    %>
+                </div>
+                <div id="prodList">
+                    <div class="writeSort">
+                        <div class="searchResultSummary">
+                            <p class="search-info">
+                                상품
+                                (총 <span id="board-count" class="count">00</span>건) 
+                            </p>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                    </div>
+                    <div id="prod">
+                        <div class="prod-wrap">
+                            <div class="prodPost" id="prdoPost1">
+                                <a href="#">
+                                    <img src="../../image/sub/shop/shop-cart-prod1.png" alt="" class="prodimg">
+                                    <div class="prod-info">
+                                        <span class="bedge">hot</span>
+                                        <h3 class="prod-name" id="prod-name-1">강아지 인형 VER 1 - 강아지</h3>
+                                        <p class="prod-price" id="prod-price-1">36,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="<%=request.getContextPath() %>/js/common.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("<%=request.getContextPath() %>/header.jsp");
+            $("#footer").load("<%=request.getContextPath() %>/footer.jsp");
+        })
+
+        $(window).scroll(function () {
+            $("#tagBox").css("margin-top", Math.max(0, 0 - $(this).scrollTop()));
+        });
+    </script>
+</body>
+
+</html>

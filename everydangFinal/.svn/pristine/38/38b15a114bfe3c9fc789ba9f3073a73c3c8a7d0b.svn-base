@@ -1,0 +1,653 @@
+@charset "UTF-8";
+
+.pagination {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    display: flex;
+    padding-top: 45px;
+    padding-bottom: 32px;
+    justify-content: center;
+}
+
+li img#prev {
+    width: 15px;
+    margin-right: 53px;
+}
+
+li img#next {
+    width: 15px;
+    margin-left: 53px;
+}
+
+.page-link {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none !important;
+    font-size: 18px;
+    color: var(--color-grey-400);
+}
+
+.page-link:hover {
+    color: var(--color-blue);
+    background: none !important;
+}
+
+.active>.page-link,
+.page-link.active {
+    color: var(--color-blue);
+    background: none !important;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: var(—bs-pagination-border-radius);
+    border-bottom-left-radius: var(—bs-pagination-border-radius)
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: var(—bs-pagination-border-radius);
+    border-bottom-right-radius: var(—bs-pagination-border-radius)
+}
+
+.button-sort {
+    border: none;
+    background: none;
+}
+
+.icon-sort {
+    width: 8px;
+}
+
+.sort-div {
+    display: flex;
+}
+
+.sort {
+    background: url("../image/icon/icon-sort.png");
+    background-repeat: no-repeat;
+    background-size: 6px 13px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin: auto 0px;
+    padding-bottom: 0px;
+    margin-left: 5px;
+}
+
+#content {
+    margin-top: 130px;
+}
+
+.table-title {
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.content-table-count {
+    font-size: 1.6rem;
+    display: flex;
+}
+
+.table-count {
+    color: var(--color-blue);
+    margin-left: 4px;
+}
+
+.listTable th {
+    font-size: 1.7rem;
+}
+
+.listTable th,
+.listTable td {
+    line-height: 50px;
+    height: 50px;
+    padding-right: 30px;
+}
+
+.listTable th:first-child,
+.listTable td:first-child {
+    padding-left: 60px;
+}
+
+.listTable th:last-child,
+.listTable td:last-child {
+    padding-right: 60px;
+}
+
+.listTable tr:nth-child(n+2):nth-child(-n+13) {
+    border-bottom: 1px solid var(--color-grey-400);
+}
+
+/* 신고 페이지 테이블 */
+
+#report-table {
+    margin-right: 48px;
+}
+
+.rp-judge-button,
+.product-button {
+    display: flex;
+}
+
+#report-tb th:first-child,
+#report-tb td:first-child,
+#blacklist-tb th:first-child,
+#blacklist-tb td:first-child {
+    padding-left: 30px;
+}
+
+#report-tb th:last-child,
+#report-tb td:last-child,
+#blacklist-tb th:last-child,
+#blacklist-tb td:last-child {
+    padding-right: 30px;
+}
+
+
+#report-tb th:first-child,
+#report-tb td:first-child {
+    width: 15%;
+}
+
+#report-tb th:nth-child(2),
+#report-tb td:nth-child(2) {
+    width: 12%;
+}
+
+#report-tb th:nth-child(3),
+#report-tb td:nth-child(3) {
+    width: 11%;
+}
+
+#report-tb th:nth-child(4),
+#report-tb td:nth-child(4) {
+    width: 20%;
+}
+
+#report-tb th:nth-child(5),
+#report-tb td:nth-child(5) {
+    width: 12%;
+}
+
+#report-tb th:last-child,
+#report-tb td:last-child {
+    width: 30%;
+}
+
+#report-tb th,
+#report-tb td {
+    padding-right: 15px;
+}
+
+.judge,
+.blacklist,
+.delete,
+.product {
+    width: 73px;
+    height: 38px;
+    border-radius: var(--border-radius8);
+    font-size: 1.7rem;
+    line-height: 35px;
+    border: none;
+    color: var(--color-white);
+    background: var(--color-blue);
+}
+
+input[name="blacklist"] {
+    width: 99px;
+}
+
+input[name="blacklist"],
+input[name="demotion"] {
+    margin-right: 5px;
+}
+
+/* 블랙리스트 테이블 -------------------------- */
+
+#blacklist-tb th:first-child,
+#blacklist-tb td:first-child {
+    width: 40%;
+}
+
+#blacklist-tb th:last-child,
+#blacklist-tb td:last-child {
+    width: 60%;
+}
+
+
+/* 회원, 관리자 게시글 관리 ---------------------- */
+
+#member-post th:first-child,
+#member-post td:first-child,
+#member-comment th:first-child,
+#member-comment td:first-child,
+#my-post th:first-child,
+#my-post td:first-child,
+#review th:first-child,
+#review td:first-child {
+    padding-left: 60px;
+    padding-right: 40px;
+}
+
+#member-post th:last-child,
+#member-post td:last-child,
+#member-comment th:last-child,
+#member-comment td:last-child,
+#my-post th:last-child,
+#my-post td:last-child,
+#order-history th:last-child
+#order-history td:last-child {
+    padding-right: 60px;
+}
+
+#member-post th:first-child,
+#member-post td:first-child,
+#member-comment th:first-child,
+#member-comment td:first-child,
+#my-post th:first-child,
+#my-post td:first-child,
+#review th:first-child,
+#review td:first-child {
+    width: 10%;
+}
+
+#member-post th:nth-child(2),
+#member-post td:nth-child(2),
+#member-comment th:nth-child(2),
+#member-comment td:nth-child(2),
+#my-post th:nth-child(2),
+#my-post td:nth-child(2) {
+    width: 10%;
+}
+
+#member-post th:nth-child(3),
+#member-post td:nth-child(3),
+#member-comment th:nth-child(3),
+#member-comment td:nth-child(3) {
+    width: 25%;
+}
+
+#member-post th:nth-child(4),
+#member-post td:nth-child(4),
+#member-comment th:nth-child(4),
+#member-comment td:nth-child(4) {
+    width: 33%;
+}
+
+#member-post th:nth-child(5),
+#member-post td:nth-child(5),
+#member-comment th:nth-child(5),
+#member-comment td:nth-child(5) {
+    width: 12%;
+}
+
+#member-post th:last-child,
+#member-post td:last-child,
+#member-comment th:last-child,
+#member-comment td:last-child {
+    width: 10%;
+}
+
+
+
+/* ----------------------------- */
+
+#my-post th:nth-child(3),
+#my-post td:nth-child(3) {
+    width: 25%;
+}
+
+#my-post th:nth-child(4),
+#my-post td:nth-child(4) {
+    width: 45%;
+}
+
+#my-post th:last-child,
+#my-post td:last-child {
+    width: 10%;
+}
+
+
+#member-post th,
+#member-post td,
+#my-post th,
+#my-post td,
+#order-history th,
+#order-history td {
+    padding-right: 15px;
+}
+
+#member-post tr:last-child,
+#member-comment tr:last-child,
+#my-post tr:last-child,
+#my-comment tr:last-child,
+#review tr:last-child {
+    border-top: 2px solid var(--color-grey-400);
+    border-bottom: 2px solid var(--color-grey-400);
+    background-color: var(--color-grey-100);
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+input[type="checkbox"]:checked::after {
+    opacity: 1;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]::after {
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../../image/icon/icon-checkbox-chk.png") 100% / cover;
+    border-radius: 4px;
+}
+
+.delete {
+    margin-right: 5px;
+}
+
+
+/* 주문 내역 테이블 ------------------------ */
+
+#order-history th:first-child,
+#order-history td:first-child {
+    width: 12%;
+}
+
+#order-history th:nth-child(2),
+#order-history td:nth-child(2) {
+    width: 13%;
+}
+
+#order-history th:nth-child(3),
+#order-history td:nth-child(3) {
+    width: 10%;
+}
+
+#order-history th:nth-child(4),
+#order-history td:nth-child(4) {
+    width: 10%;
+}
+
+#order-history th:nth-child(5),
+#order-history td:nth-child(5) {
+    width: 15%;
+}
+
+#order-history th:nth-child(6),
+#order-history td:nth-child(6) {
+    width: 20%;
+}
+
+#order-history th:last-child,
+#order-history td:last-child {
+    width: 10%;
+}
+
+/* 리뷰 테이블 */
+
+#review th:nth-child(2),
+#review td:nth-child(2) {
+    width: 8%;
+}
+#review th:nth-child(3),
+#review td:nth-child(3) {
+    width: 12%;
+}
+#review th:nth-child(4),
+#review td:nth-child(4) {
+    width: 10%;
+}
+#review th:nth-child(5),
+#review td:nth-child(5) {
+    width: 10%;
+}
+#review th:nth-child(6),
+#review td:nth-child(6) {
+    width: 40%;
+}
+#review th:last-child,
+#review td:last-child {
+    width: 10%;
+}
+
+/* ----------------------------------------- */
+
+#del-black {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ----------------------------------------- */
+
+.table-subtitle {
+    margin-bottom: 16px;
+}
+
+input {
+    font-size: 1.7rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--font-desabled);
+    border-radius: 8px;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    font-size: 1.7rem;
+    color: var(--font-desabled);
+    /*padding-left: 16px;*/
+}
+
+.content-product-info {
+    margin-bottom: 24px;
+}
+
+.content-product-option {
+    display: flex;
+    justify-content: space-between;
+}
+
+#optionInput {
+    width: 91%;
+    height: 40px;
+    border: 1px solid var(--font-desabled);
+    border-radius: 8px;
+    padding-left: 20px;
+}
+
+#registerOption, #registerProduct {
+    width: 112px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border-radius: 8px;
+    border: none;
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+#productImage {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--font-desabled);
+    border-radius: 8px;
+}
+
+#productImage::-webkit-file-upload-button {
+    width: 112px;
+    height: 40px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    margin-right: 12px;
+}
+
+.content-product-price {
+    display: flex;
+    border-radius: 8px !important;
+    overflow: hidden;
+    width: 20%;
+    border: 1px solid var(--font-desabled);
+}
+
+#prodPrice {
+    border-radius: 0px;
+    border: none;
+    padding-left: 20px;
+}
+
+#priceKRW {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border: none;
+    color: var(--color-white);
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 40px;
+}
+
+.content-product-info:last-child {
+    margin-top: 48px;
+}
+
+.productModify {
+    margin-right: 5px;
+}
+
+
+/* 상품 관리 테이블 */
+
+#product-tb th:first-child,
+#product-tb td:first-child {
+    width: 17%;
+}
+
+#product-tb th:nth-child(2),
+#product-tb td:nth-child(2) {
+    width: 19%;
+}
+
+#product-tb th:nth-child(3),
+#product-tb td:nth-child(3) {
+    width: 17%;
+}
+
+#product-tb th:nth-child(4),
+#product-tb td:nth-child(4) {
+    width: 17%;
+}
+
+#product-tb th:nth-child(5),
+#product-tb td:nth-child(5) {
+    width: 15%;
+}
+
+#product-tb th:last-child,
+#product-tb td:last-child {
+    width: 15%;
+}
+
+
+.product-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pr-op-select {
+    width: 50%;
+    border: none;
+}
+
+
+/* -------------------------- */
+
+#input-userinfoChk {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
+#input-userinfoChk::after {
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../../image/sub/shop/checkbox-chk.png") 100% / cover;
+    border-radius: 4px;
+}
+#input-userinfoChk:checked::after {
+    opacity: 1;
+    border-radius: 4px;
+}
+
+/* 회원 테이블 */
+
+#member-table th:first-child, #member-table td:first-child {
+    width: 15%;
+}
+#member-table th:nth-child(2), #member-table td:nth-child(2) {
+    width: 10%;
+}
+#member-table th:nth-child(3), #member-table td:nth-child(3) {
+    width: 10%;
+}
+#member-table th:nth-child(4), #member-table td:nth-child(4) {
+    width: 20%;
+}
+#member-table th:nth-child(5), #member-table td:nth-child(5) {
+    width: 15%;
+}
+#member-table th:nth-child(6), #member-table td:nth-child(6) {
+    width: 10%;
+}
+#member-table th:nth-child(7), #member-table td:nth-child(7) {
+    width: 10%;
+}
+#member-table th:last-child, #member-table td:last-child {
+    width: 10%;
+}
+
+.option-div {
+	display: flex;
+	border-radius: 8px !important;
+	overflow: hidden;
+	width: 20%;
+	border: 1px solid var(--font-desabled);
+	margin-bottom: 15px;
+}
+
+.option {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.deleteOption {
+	width: 40px;
+	height: 40px;
+	background-color: var(--color-blue);
+	border: none;
+	color: var(--color-white);
+	font-size: 1.7rem;
+	text-align: center;
+	line-height: 40px;
+}
+
+input[readonly=readonly] {
+	outline: none;
+	border: none;
+}

@@ -1,0 +1,123 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<title>댕주접 | 커뮤니티</title>
+<link rel="icon" href="/everydang/assets/favicon.ico">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/board/gridBoard.css">
+<script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div id="wrap" class="boast">
+		<div id="container">
+			<div id="siteMapBox">
+				<div id="siteMap">
+					<a href="<%=request.getContextPath() %>/index.html">
+					<img src="<%=request.getContextPath() %>/image/icon/icon-home-blue.png" alt="icon-home-blue.png" id="home"></a> 
+					<img src="<%=request.getContextPath() %>/image/icon/icon-arrow-right.png" alt="icon-arrow-right.png" class="arrow"> 
+					<a href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp" class="siteMapBoard">COMMUNITY</a> 
+					<img src="<%=request.getContextPath() %>/image/icon/icon-arrow-right.png" alt="icon-arrow-right.png" class="arrow"> 
+					<a href="<%=request.getContextPath() %>/sub/board/boastBoard.jsp" class="siteMapBoard">댕주접</a>
+				</div>
+			</div>
+			<p id="superBoard">
+				<a href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp">COMMUNITY</a>
+			</p>
+			<div id="subBoardBox">
+				<div id="subBoard">
+					<a href="<%=request.getContextPath() %>/sub/board/bowwowBoard.jsp" class="board">
+                        멍멍게시판
+                    </a>
+                    <a href="<%=request.getContextPath() %>/sub/board/boastBoard.jsp" class="board selected">
+                        댕주접
+                    </a>
+                    <a href="<%=request.getContextPath() %>/sub/board/marketBoard.jsp" class="board">
+                        댕근마켓
+                    </a>
+				</div>
+			</div>
+			<div id="postListBox">
+				<div id="postList">
+					<div id="writeSort">
+						<a href="<%=request.getContextPath() %>/sub/board/wikiWrite.jsp" id="writeButton">
+                            <img src="<%=request.getContextPath() %>/image/icon/icon-edit-blue.png" alt="icon-edit.png" id="writeIcon" />
+                            작성하기
+                        </a>
+						<select name="sort" id="sort">
+							<option value="dateSort" id="dateSort" selected>날짜순</option>
+							<option value="likeSort" id="likeSort">좋아요순</option>
+							<option value="commentSort" id="commentSort">댓글순</option>
+						</select>
+					</div>
+
+					<div id="postGrid">
+						<div class="normalPostGrid">
+							<div class="contents">
+								<p class="pPhoto">
+									<a href="<%=request.getContextPath() %>/sub/board/boastRead.jsp">
+										<img src="<%=request.getContextPath() %>/image/sub/board/board-thum1.png" alt="board-thum1.png" class="thumbnail">
+									</a>
+								</p>
+								<div class="writerDate">
+									<a href="#" class="writer">시고르자브종</a>
+									<p class="date">2023-05-24</p>
+								</div>
+								<p class="pSubject">
+									<a href="<%=request.getContextPath() %>/sub/board/boastRead.jsp" class="subject">우리 귀여운 호두 자랑합니다~</a>
+								</p>
+								<div class="likeComment">
+									<img src="<%=request.getContextPath() %>/image/icon/icon-like-on.png" alt="icon-like-on.png" class="like">
+									<span class="countLike">14</span> 
+									<img src="<%=request.getContextPath() %>/image/icon/icon-comment-black.png" alt="icon-comment-black.png" class="comment">
+									<span class="countComment">13</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-label="Page navigation example" class="page">
+					<ul class="pagination">
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<img src="<%=request.getContextPath() %>/image/icon/icon-arrow-prev.png" alt="icon-arrow-prev.png" id="prev"></a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">1</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">2</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">3</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">4</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">5</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="#">
+								<img src="<%=request.getContextPath() %>/image/icon/icon-arrow-next.png" alt="icon-arrow-next.png" id="next">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+	<script>
+		$(function() {
+			$("#header").load("<%=request.getContextPath() %>/header.jsp");
+			$("#footer").load("<%=request.getContextPath() %>/footer.jsp");
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url("../common.css");
+
+body{
+    background-color: var(--color-bg1);
+    padding-top: 66px;
+}
+
+#header{
+    z-index: 2;
+}
+
+div{
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+}
+
+/* profile */
+#myProfile {
+    background: #fff;
+}
+
+#profileDetail {
+    width: 1200px;
+    margin: auto; 
+    padding: 32px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#profileDetail img {
+    width: 80px;
+    margin-right: 24px;
+}
+
+#profilemodify {
+    padding: 32px 0px;
+    display: flex;
+    align-items: center;
+    position : relative;
+}
+
+#profilemodify img {
+    width: 80px;
+    margin-right: 24px;
+}
+
+#profilemodifyicon{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+#profilemodifyicon img{
+    width: 40px;
+}
+
+#level {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--color-red);
+    border-radius: var(--border-radiusround);
+    font-size: 0.8rem;
+    color: var(--color-red);
+    text-align: center;
+    line-height: 15px;
+    margin-right: 8px;
+}
+#nickName {
+    color: var(--font-medium);
+    font-size: 2.0rem;
+    font-weight: 700;
+
+}
+/* container */
+#container {
+    width: 1200px;
+    margin: auto; 
+    display: flex;
+}
+
+/* 메뉴 */
+#menu {
+    width: 222px;
+    padding: 75px 0px;
+}
+
+#menu h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--font-medium);
+    height: 31px;
+    margin-bottom: 12px;
+    padding: 0 12px;
+}
+
+#menu li a {
+    display: block;
+    color: var(--color-grey-400);
+    font-size: 1.5rem;
+    height: 32px;
+    padding: 0 12px;
+}
+#menu li a.active {
+    background: #fff;
+    color: var(--color-blue);
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+#menu li a:hover {
+    opacity: .8;
+    transition: .5s;
+}
+#menu ul {
+    margin-bottom: 49px;
+}
+#menu>a {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--font-medium);
+    padding: 0 12px;
+}
+#menu>a i {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+}
+#menu a img {
+    width: 16px;
+}
+/* 오른쪽 */
+
+.spantext{
+    color: var(--color-blue);
+}
+
+
+.postboard{
+    font-size: 1.6rem;
+    padding: 25px;
+    height: auto;
+    width: 900px;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-1);
+    border-radius: 8px;
+}
+
+
+.postboardtxt2{
+    color: var(--font-medium);
+    font-size: 1.4rem;
+    text-align: right;
+    margin-right: 10px;
+}
+
+
+.review{
+    border: 1px solid var(--color-grey-200);
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 35px;
+    box-shadow: var(--shadow-3);
+}
+
+.reviewTitle {
+    margin: 8px 0;
+    font-size: 1.7rem;
+}
+
+.date, .textellipsis {
+    font-size: 1.4rem;
+    color: var(--font-medium);
+}
+.textellipsis {
+    width: 770px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 24px;
+}
+.title{
+    font-size: 1.6rem;
+    color: var(--font-high);
+}
+
+.like svg {
+    fill: var(--color-red);
+}
+.like svg:last-child {
+    fill: var(--color-grey-400);
+}
+
+.btnBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin: 24px 0 0 0;
+}
+
+.btnBox a, .btnBox button {
+    display: inline-block;
+    width: 104px;
+    height: 40px;
+    border-radius: var(--border-radius8);
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btnBox a{
+    background: var(--color-blue);
+    color: #fff;
+}
+
+.btnBox button {
+    background: #fff;
+    border: 1px solid var(--color-blue);
+}

@@ -1,0 +1,76 @@
+package com.everydang.member.dao;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.everydang.mybatis.config.MyBatisSqlSessionFactory;
+import com.everydang.vo.MemberVO;
+
+public class MemberDAO implements IMemberDAO {
+	
+	private static IMemberDAO dao;
+	
+	public static IMemberDAO getInstance() {
+		if(dao == null) {
+			dao = new MemberDAO();
+		}
+		
+		return dao;
+	}
+
+	//회원가입 정보
+	@Override
+	public int insertJoinInformation(MemberVO membervo) {
+		 SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSession();
+	      
+	      int cnt = 0;
+	      
+	      try {
+	         cnt = sqlSession.insert("member.insertJoinInformation", membervo);
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         sqlSession.commit();
+	         sqlSession.close();
+	      }
+	      
+	      return cnt;
+	}
+
+	//아이디 중복 검사
+	@Override
+	public String selectCheckId(String id) {
+		SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSession();
+		
+		String res = null;
+		
+		try {
+			res = sqlSession.selectOne("member.selectCheckId", id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.commit();
+			sqlSession.close();
+		}
+		
+		return res;
+	}
+
+	@Override
+	public String selectcheckNickname(String nickname) {
+		SqlSession sqlSession = MyBatisSqlSessionFactory.getSqlSession();
+		
+		String res = null;
+		
+		try {
+			res = sqlSession.selectOne("member.selectcheckNickname", nickname);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.commit();
+			sqlSession.close();
+		}
+		
+		return res;
+	}
+
+}

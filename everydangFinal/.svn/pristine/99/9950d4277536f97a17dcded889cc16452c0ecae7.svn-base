@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+<!-- 공지사항용 쿼리 -->
+	<select id="selectAllNotice" resultType="boardVO"
+		parameterType="String">
+		SELECT 
+			br_code,
+			ps_no, 
+			(SELECT mm_nickname FROM MEMBER WHERE mm_id = 'everydang') mm_nickname, 
+			ps_subject, 
+			ps_content, 
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+		FROM POST WHERE br_code = 'NOTICE';
+	</select>
+
+	<!-- 리스트형 게시판용 쿼리 -->
+	<!-- 게시판별로 글을 읽어와 게시판에 보여주는 쿼리문 -->
+	<select id="selectPostListBoard" resultType="boardVO"
+		parameterType="Map">
+		SELECT 
+			br_code,
+			ps_no, 
+			(SELECT mm_nickname FROM MEMBER WHERE mm_id = #{mm_id}) mm_nickname, 
+			ps_subject, 
+			ps_content, 
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+		FROM POST WHERE br_code = #{br_code} ;
+	</select>
+
+	<!-- 날짜순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByDate" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY ps_no desc
+	</select>
+
+	<!-- 좋아요순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByLike" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY like_count desc
+	</select>
+
+	<!-- 댓글순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByComment" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY ${comment_count} desc
+	</select>
+
+	<!-- 그리드형 게시판용 쿼리 -->
+	<!-- 글을 읽어와 게시판에 보여주는 쿼리문 -->
+	<select id="selectListBoardPost" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		ps_thumbnail,
+		to_char(ps_date, 'yy-mm-dd'),
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code}
+	</select>
+
+	<!-- 날짜순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByDate" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		ps_thumbnail,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY ps_no desc;
+	</select>
+
+	<!-- 좋아요순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByLike" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		ps_thumbnail,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY like_count desc;
+	</select>
+
+	<!-- 댓글순으로 정렬하는 쿼리문 -->
+	<select id="selectPostSortByComment" resultType="boardVO"
+		parameterType="Map">
+		SELECT
+		br_code,
+		ps_no,
+		mm_id,
+		ps_subject,
+		ps_content,
+		ps_thumbnail,
+		to_date(ps_date, 'yy-mm-dd') ps_date
+		(SELECT count(ls_like) FROM LIKE_SCRAP WHERE ps_no = #{ps_no}) like_count,
+		(SELECT count(cm_no) FROM "COMMENT" c WHERE ps_no = #{ps_no})
+		comment_count
+		FROM POST WHERE br_code = #{br_code} ORDER BY comment_count desc;
+	</select>
+</mapper>

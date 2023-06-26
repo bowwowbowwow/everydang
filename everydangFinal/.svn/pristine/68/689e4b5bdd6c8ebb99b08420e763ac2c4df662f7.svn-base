@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+:root {
+    /* bg */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg1: #f5f5f5;
+    --color-bgAnnounce: #F2FAF9;
+
+    /* color */
+    --color-red: #F3A092;
+    --color-orange: #F3A092;
+    --color-purple: #E0CCE7;
+    --color-blue : #61BBB9;
+    --color-green : #7DC384;
+
+    --color-grey-100 : #F5F5F5;
+    --color-grey-200 : #EEEEEE;
+    --color-grey-300 : #E0E0E0;
+    --color-grey-400 : #BDBDBD;
+    --color-grey-500 : #9E9E9E;
+    --color-grey-600 : #757575;
+    --color-grey-700 : #616161;
+    --color-grey-800 : #424242;
+    --color-grey-900 : #212121;
+
+    /* font */
+    --font-size: 10px;
+    --font-high: #131313;
+    --font-medium: #7d7d7d;
+    --font-desabled: #D9D9D9;
+
+    /* border-radius */
+    --border-radius12 : 12px;
+    --border-radius8: 8px;
+    --border-radius4: 4px;
+    --border-radiusround: 50%;
+
+    /* shadow */
+    --shadow-1 : 1px 3px 10px rgba(217, 217, 217, 0.5);
+    --shadow-2 : -4px -3px 6px rgba(228, 228, 228, 0.25), 4px 4px 6px rgba(217, 217, 217, 0.23);
+    --shadow-3 : 0px 0px 30px rgba(195, 206, 206, 0.15);
+
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {font-size: var(--font-size); color: var(--font-high); font-family: 'Pretendard'}
+
+
+/* header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 13px 0;
+    background-color: #fff;
+    box-shadow:  0px 4px 7px rgba(238, 230, 230, 0.5);
+    z-index: 99;
+
+}
+.headWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h-left, .h-right {
+    display: flex;
+    align-items: center;
+}
+.h-left {
+    gap: 4.8rem;
+}
+.h-left .logo {
+    width: 17rem;
+    text-indent: -9999em;
+}
+.h-left .logo a {
+    display: block;
+    height: 46px;
+    background: url("../image/logo/logo-verti.png") center / cover;
+}
+.gnb {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.gnb a {
+    font-size: 1.5rem;
+    color: var(--font-medium);
+    transition: .3s;
+}
+
+.h-right {
+    gap: 9.5rem;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 223px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 8px 0;
+    box-shadow: var(--shadow-1);
+}
+.search-box p {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.search-box p::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../image/icon/icon-search.png") center / cover;
+}
+.search-box #input-search {
+    width: 143px;
+    height: 24px;
+    border: none;
+    outline: none;
+
+}
+.search-box #input-search::placeholder {
+    font-size: 1.5rem;
+    color: var(--font-medium);
+}
+.user-area{
+    transition: .3s;
+}
+.user-area .guest {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.user-area .guest .user-login a {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.user-area .guest .user-login .icon-user {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../image/icon/icon-user.svg") center / cover;
+}
+.user-area .guest .divider {
+    width: 2px;
+    height: 1.6rem;
+    background-color: var(--color-red);
+}
+.user-area a {
+    font-size: 1.5rem;
+    color: var(--font-medium)
+}
+.member {
+    display: flex;
+    gap: 12px;
+
+}
+.member div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+
+    
+}
+.member div a i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.member div.user-alarm  {
+    position: relative;
+    transition: .35s;
+}
+.member div.user-alarm i {
+    width: 32px;
+    height: 32px;
+    background-image: url("../image/icon/icon-notice-full.png");
+}
+.member div.user-alarm.active i {
+    background-image: url("../image/icon/icon-notice-full-alert.png");
+}
+.member div.user-page .thum {
+    border-radius: var(--border-radiusround);
+    overflow: hidden;
+    border: 1px solid var(--color-grey-200);
+}
+.member div.user-page .thum i {
+    background-image: url(../image/main/main-thum1.png);
+}
+.member.shop .user-cart {
+    display: block;
+    margin-right: -8px;
+
+}
+.member.shop .user-cart i {
+    width: 28px;
+    height: 28px;
+    background-image: url(../image/icon/icon-cart.png);
+}
+.member .user-cart {display: none;}
+.admin a {
+    width: 12rem;
+    height: 4rem;
+    padding: 11px 18px;
+    border-radius: var(--border-radius8);
+    border: none;
+    background-color: var(--color-red);
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+
+.gnb a:hover, .user-area a:hover{
+    color: var(--color-red);
+}
+
+/* alarm */
+
+.alarm-modal {
+    opacity: 0;
+    left: -5rem;
+    position: absolute;
+    width: 40rem;
+    background-color: #fff;
+    border-radius: var(--border-radius12);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+    transition: .35s;
+    pointer-events : none;
+}
+.user-alarm .alarm-modal.active {
+    opacity: 1;
+    pointer-events : visible;
+}
+.alarm-modal-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.alarm-modal .alarm-modal-header {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2%;
+    border-bottom: 1.5px solid var(--color-green);
+}
+
+.alarm-modal ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 0;
+}
+.alarm-modal ul li.alarm-list {
+    padding: 1.2rem 2.4rem;
+}
+.alarm-modal ul li.alarm-list:hover {
+    background-color: var(--color-bg1);
+}
+.alarm-modal ul li.alarm-list .user-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.alarm-modal ul li.alarm-list .user-info a {
+    width: auto;
+    height: auto;
+}
+.alarm-modal ul li.alarm-list .user-info a i#thum {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 8px;
+    border-radius: var(--border-radiusround);
+    background: url("../image/main/main-thum1.png") center / cover;
+}
+.alarm-modal ul li.alarm-list .date-info #date {
+    font-size: 1.2rem;
+    color: var(--font-medium);
+}
+.alarm-modal .alarm-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alarm-modal .alarm-content > a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1.2rem 0;
+    line-height: 1.2;
+}
+.alarm-modal .alarm-content > a #page-name {
+    font-weight: 600;
+}
+/* footer */
+#footer {
+    margin-top: 64px;
+    background: white;
+    box-shadow:  0px -4px 27px rgba(217, 217, 217, 0.2);
+}
+#footer .f-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 2.6rem 0;
+    gap:2.4rem ;
+}
+#footer .f-wrap .f-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.f-infoList {
+    display: flex;
+    gap: 4.8rem;
+    font-size: 1.3rem;
+}
+.f-infoList a {
+    display: block;
+    color: var(--font-high);
+    transition: .3s;
+}
+.f-infoList a:hover {
+    opacity: 0.8;
+}
+.f-infoList li {
+    position: relative;
+}
+.f-infoList li:not(:last-child)::after {
+    position: absolute;
+    top: 0;
+    right: -24px;
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    margin-left: 2.4rem;
+    background-color: var(--font-medium);
+}
+.btnArea .topBtn {
+    position: relative;
+    display: block;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: #fff;
+    border-radius: var(--border-radius8);
+    box-shadow: var(--shadow-1);
+}
+.btnArea .topBtn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.1rem;
+    height: 8px;
+    background: url("../image/icon/icon-top.png") center / cover;
+}
+.f-info-dropdown {
+    font-size: 1.1rem;
+    color: var(--color-grey-400);
+}
+.f-info-dropdown span {
+    line-height: 1.5;
+}

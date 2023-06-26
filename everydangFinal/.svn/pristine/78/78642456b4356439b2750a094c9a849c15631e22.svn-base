@@ -1,0 +1,23 @@
+package com.everydang.vo;
+
+public class BoardVO {
+	private String br_code;
+	private String br_name;
+
+	public String getBr_code() {
+		return br_code;
+	}
+
+	public void setBr_code(String br_code) {
+		this.br_code = br_code;
+	}
+
+	public String getBr_name() {
+		return br_name;
+	}
+
+	public void setBr_name(String br_name) {
+		this.br_name = br_name;
+	}
+
+}

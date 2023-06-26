@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="member">
+  
+  <!-- 회원가입 -->
+  
+  <!-- 회원가입 입력 -->
+  <insert id="insertJoinInformation" parameterType="memberVO">
+  	insert into member (mm_id, mm_password, mm_nickname, mm_name, mm_mail, mm_tel, 
+						mm_zip, mm_addr1, mm_addr2, mm_profile, gr_no, mm_join_date)
+				values ( #{mm_id}, #{mm_password}, #{mm_nickname}, #{mm_name}, #{mm_mail}, #{mm_tel}, 
+						#{mm_zip}, #{mm_addr1}, #{mm_addr2}, 'filepath', 0, sysdate)
+  </insert>
+  
+  <!-- 아이디 중복 확인 -->
+  <select id="selectCheckId" resultType="String" parameterType="String">
+      select mm_id from member where mm_id = #{data}   
+  </select>
+  
+  <!-- 닉네임 중복 확인 -->
+  <select id="selectcheckNickname" resultType="String" parameterType="String">
+      select mm_nickname from member where mm_nickname = #{data}   
+  </select>
+  
+  
+  <!-- 로그인 -->
+  
+  
+  </mapper>

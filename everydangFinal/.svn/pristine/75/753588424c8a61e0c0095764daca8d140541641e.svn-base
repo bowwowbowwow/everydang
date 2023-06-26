@@ -1,0 +1,145 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/join/join.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdP93smAAAAAAypgFKR5s7E039SrPo65UDUI0yO"></script>
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+    <header id="header"></header>
+
+<div class="wrap">
+    <div id="container">
+
+        <div id="logo">
+        <img src="<%=request.getContextPath()%>/image/logo/logo-symbol.png" alt="logo-symbol" >
+        </div>
+
+        <h1>약관 동의</h1>
+    <div class="agree">
+
+        <div class="all-check">
+            <div class="input-wrap">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                전체 약관 동의
+                </label>
+                
+            </div>
+        </div>
+        <hr>
+
+    <div>
+
+        <div class="form-check">
+            <div class="input-wrap">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                [필수] 이용 약관
+            </label>
+            </div>
+           
+        </div>
+
+        <div class="form-check">
+            <div class="input-wrap">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    [필수] 개인 정보 이용 약관
+                </label>
+            </div>
+            
+        </div>
+
+        <div class="form-check">
+            <div class="input-wrap">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                [필수] 서비스를 위한 개인정보 제공 동의
+            </label>
+        </div>
+            
+    </div>
+
+    </div>
+
+    </div>
+
+    <h1>회원 정보(필수)</h1>
+        <div class="memberinfo">
+            <form>
+
+            <label class="memberinfolabel" for="id">아이디</label>
+            <input type="text" id="id" style="width:440px;"> 
+            <div class="duplication">
+            <input type="button" value="중복확인" class="duplicationbutton">
+            </div>
+            <hr>
+
+            
+            <label class="memberinfolabel" for="password">비밀번호</label>
+            <input type="password" id="password" style="width:530px;">
+            <hr>
+
+            <label class="memberinfolabel" for="passwordcheck">비밀번호 확인</label>
+            <input type="password" id="passwordcheck" style="width:530px;">
+            <hr>
+        
+            
+            <label class="memberinfolabel" for="nickname">닉네임</label>
+            <input type="text" id="nickname" style="width:440px;"> 
+            <div class="duplication">
+            <input type="button" value="중복확인" class="duplicationbutton">
+            </div>
+            <hr>
+
+            <label class="memberinfolabel" for="name">이름</label>
+            <input type="text" id="name" style="width:530px;">
+            <hr>
+
+            <label class="memberinfolabel" for="email">이메일</label>
+            <input type="text" id="email" style="width:530px;">
+            <hr>
+
+            <label class="memberinfolabel" for="tel">핸드폰</label>
+            <input type="text" id="tel" style="width:530px;">
+            <hr>
+
+            <label class="memberinfolabel" for="addr">주소</label>
+            <input type="text" class="addr" style="width: 150px; border: 1px solid var(--color-grey-400)"> <input id="addrsearch" type="button" value="주소 검색"><br>
+            <label class="memberinfolabel" for="addr2"></label>
+            <input type="text" class="addr2" style="border: 1px solid var(--color-grey-400)"><input type="text" class="addr2" style="border: 1px solid var(--color-grey-400)"><br>
+            <label class="memberinfolabel" for="addr3"></label>
+            <input type="text" class="addr3" style="border: 1px solid var(--color-grey-400)">
+            <hr>
+
+            자동가입방지
+            <div id="captcha" class="g-recaptcha" data-sitekey="6LdP93smAAAAAAypgFKR5s7E039SrPo65UDUI0yO">
+            </div>
+        
+        </form>
+        </div>
+        
+        <div class="lastbutton">
+            <form action="<%=request.getContextPath()%>/sub/member/join/joinSuccessPage.jsp">
+            <input class="submit" type="submit" value="가입하기">
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.jsp");
+        $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+    </script>
+</body>
+</html>

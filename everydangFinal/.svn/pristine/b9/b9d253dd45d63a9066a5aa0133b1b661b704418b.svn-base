@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findIdSuccessPage</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login/login.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+
+
+</head>
+<body>
+    <header id="header"></header>
+<div class="wrap">
+    <div id="container">
+    <img src="<%=request.getContextPath()%>/image/logo/logo-symbol.png" alt="logo-symbol" >
+
+    <div>
+        <h1 class=find>아이디 찾기</h1>
+    </div>
+    
+    <div id=loginform style="display: flex; flex-direction: column;">
+            <div style="text-align: left; font-size: 1.3rem; color: gray; margin: 20px;">
+                <p>해당 아이디는 <br><br> <span style="font-size: 1.8rem; color: #61BBB9;">EVERY DANG</span> 입니다.</p>
+            </div>
+                <form>
+                    <input type="submit" value="로그인"  style="color: white; background-color: #61BBB9;">
+                </form>
+    </div>
+
+    <div id="signfindlink">
+        <br>
+        <p style="font-size: 1.4rem;"> 비밀번호가 기억 안 나시나요? <a href="<%=request.getContextPath()%>/sub/member/login/findPassword.jsp">비밀번호 찾기</a> </p>
+    </div>
+
+    </div>
+</div>
+
+<footer id="footer"></footer>
+<script>
+    // header & footer
+    $("#header").load("<%=request.getContextPath()%>/header.jsp");
+    $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+</script>
+</body>
+</html>

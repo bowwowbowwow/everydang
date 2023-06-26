@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url("../common.css");
+
+body {
+    padding-top: 66px;
+}
+div{ 
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+}
+/* container */
+#container {
+    width: 1200px;
+    margin: 82px auto;
+}
+/* tab */
+#tabBox {
+    display: flex;
+}
+
+#tabSub {
+    box-shadow: 0px 0px 10px var(--color-grey-100);
+    display: flex;
+    width: 480px;
+    height: 64px;
+    align-items: center;
+    margin: 0px auto;
+    border-radius: 50px;
+}
+
+#cartTab,
+#wishTab {
+    width: 240px;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.tab {
+    font-size: 1.8rem;
+    color: var(--color-grey-400);
+}
+.selected {
+    background-color: var(--color-blue);
+    border-radius: 50px;
+    color: var(--color-grey-100);
+}
+/* 목록 */
+#wishlistBox {
+    margin-top: 64px;
+}
+.wishRow {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat(4,1fr);
+	gap: 12px;
+    
+    align-items: center;
+    margin-bottom: 24px;
+}
+.wishItem {
+    position: relative;
+    text-align: center;
+    height: 419px;
+}
+.x {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: url("../../image/icon/icon-plus.png") no-repeat center/cover;
+    width: 20px;
+    height: 20px;
+    border: none;
+    transform: rotate(45deg);
+}
+.wishItem img {
+    width: 282px;
+    margin-bottom: 32px;
+}
+.hot{
+    display: block;
+    margin: auto;
+    width: 54px;
+    height: 20px;
+    background-color: var(--color-red);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 23px;
+    color: #fff;
+    opacity: 0;
+    font-size: 1.0rem;
+}
+
+.hotItem {
+    opacity: 1;
+}
+.itemTitle {
+    font-size: 1.6rem;
+    margin: 8px 0px;
+}
+.itmePrice {
+    font-size: 1.6rem;
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+	<!-- 리스트형 게시판용 쿼리 --><!-- 게시판별로 글을 읽어와 게시판에 보여주는 쿼리문 -->
+	<select id="selectPostToListBoard" resultType="boardVO">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			(SELECT mm_profile FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_profile,
+			ps_subject,
+			ps_content,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(lk_like) FROM "LIKE" l WHERE l.ps_no = p.ps_no) lk_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = 'bowwow'
+		ORDER BY ps_no DESC
+	</select>
+	
+	<!-- 공지사항용 쿼리 -->
+	<select id="selectAllNotice" resultType="boardVO"> 
+		SELECT 
+			br_code,
+			ps_no, 
+			(SELECT mm_nickname FROM MEMBER WHERE mm_id = 'everydang') mm_nickname, 
+			(SELECT mm_profile FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_profile,
+			ps_subject, 
+			ps_content, 
+			to_char(ps_date, 'yyyy-mm-dd') ps_date
+		FROM POST p
+		WHERE br_code = 'notice'
+		ORDER BY ps_no DESC
+	</select>
+	
+	<!-- 메인에 출력할 쿼리문 -->
+	<select id="selectPostForMain" resultType="boardVO" parameterType="String">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			(SELECT mm_profile FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_profile,
+			ps_subject, mm_id,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(lk_like) FROM "LIKE" l WHERE l.ps_no = p.ps_no) lk_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = #{br_code} 
+		ORDER BY ps_no DESC
+	</select>
+	
+	<!-- 게시판의 글을 좋아요순으로 정렬하는 쿼리 -->
+	<select id="selectPostSortedByLike" resultType="boardVO">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			ps_subject,
+			ps_content,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(lk_like) FROM "LIKE" l WHERE l.ps_no = p.ps_no) lk_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = 'bowwow' 
+		ORDER BY lk_like DESC, ps_no DESC
+	</select>
+	
+	<!-- 게시판의 글을 댓글순으로 정렬하는 쿼리 -->
+	<select id="selectPostSortedByComment" resultType="boardVO">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			ps_subject,
+			ps_content,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(lk_like) FROM "LIKE" l WHERE l.ps_no = p.ps_no) lk_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = 'bowwow' 
+		ORDER BY cm_no DESC, ps_no DESC
+	</select>	
+	
+	<select id="selectFindPostToListBoard" resultType="boardVO">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			ps_subject,
+			ps_content,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(lk_like) FROM "LIKE" l WHERE l.ps_no = p.ps_no) lk_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = 'wiki'
+		ORDER BY ps_no DESC
+	</select>	
+</mapper>

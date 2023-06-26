@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>글확인 | 공지사항</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/board/postRead.css">
+    <script src="<%= request.getContextPath() %>/js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <div id="postBox">
+                <div id="category">
+                    <a href="<%=request.getContextPath() %>/sub/board/noticeBoard.jsp">공지사항 ></a>
+                </div>
+                <div id="postHeader">
+                    <p id="subject">강아지가 기지개 켜는 자세를 하는 이유가 뭔가요?</p>
+                    <div id="postWriterInfoBox">
+                        <div id="postWriterInfo">
+                            <img src="<%= request.getContextPath() %>/image/user-profile/icon-user-profile1.png" alt="icon-user-profile1.png">
+                            <div id="postWriterDate">
+                                <p><a href="#" id="postWriter">글쓴이</a></p>
+                                <p id="postDate">2023. 5. 27</p>
+                            </div>
+                        </div>
+                        <div id="postTopButtons">
+                            <img src="<%= request.getContextPath() %>/image/icon/icon-hit.png" alt="icon-hit.png" class="img">
+                            <p id="hitCount" class="count">24</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="postBody">
+                    <div id="postContentBox">
+                        <img src="<%= request.getContextPath() %>/image/main/main-slide1.png" alt="main-slide1.png">
+                        <p id="postContent">보내는 시들어 할지니, 이상은 귀는 길지 공자는 옷을 구할 듣는다. 우리는 우리의 꽃이 지혜는 보는 얼음에 봄바람이다. 피어나기 무엇을
+                            것이
+                            그것을 이
+                            가슴이 청춘을 것이다. 가는 찾아다녀도, 그러므로 기관과 말이다. 그들에게 희망의 못할 교향악이다. 고동을 끝에 길을 얼마나 말이다. 청춘에서만 주는 어디
+                            소리다.이것은
+                            뜨고, 밥을 희망의 하였으며, 위하여서, 봄바람이다. 것은 사랑의 무엇을 같은 청춘의 찾아다녀도, 곧 찬미를 그것은 그리하였는가? 대한 소금이라 현저하게 되는 꽃이
+                            철환하였는가?목숨이 희망의 돋고, 운다. 가치를 보는 사랑의 돋고, 방황하였으며, 반 짝이는 그들에게 거친 가지에 교향악이다. 창공에 이상이 많이 발휘하기 되려니와,
+                            이상,
+                            봄날의 운다. 그들의 이상은 천자만홍이 자신과 방지하는 있음으로써 귀는 것이 모래뿐일 있는가? 가치를 귀는 풀밭에 몸이 위하여서. 풀밭에 대중을 뭇 타오 르고 청춘의
+                            너의
+                            사랑의 때문이다. 우리 싸인 얼마나 이상 우리의 것이다. 위하여서, 품고 반짝이는 구할 풀이 못할 가장 사막이다. 곧 이상은 설레는 있을 방황하 여도, 아름다우냐?
+                            가장
+                            심장은 방황하였으며, 싹이 바이며, 귀는 밝은 봄바람을 청춘을 아니다.되려니와, 피어나기 방황하여도, 불러 찬미를 아름답고 같은 피어나 는 사막이다. 곳으로
+                            튼튼하며, 어디
+                            봄바람이다. 이것이야말로 이것을 하여도 있는가? 그들에게 주며, 오직 쓸쓸하랴? 주며, 소담스러운 바이며, 별과 끓는다 . 꽃 이상의 그들은 공자는 있음으로써 밥을
+                            교향악이다. 넣는 그것을 이는 작고 그리하였는가? 소금이라 이 피어나기 이상의 위하여 이는 이것이야말로 듣는다. 투명하되 없 으면, 속잎나고, 구할 커다란 것이다.
+                            청춘의
+                            풀이 천지는 많이 것이다.</p>
+                    </div>
+                </div>
+                <div id="postFooter">
+                    <div id="tags">
+                    </div>
+                    <div id="postBottomButtons adminView">
+                        <input type="button" value="수정" id="postModify" name="postModify">
+                        <input type="button" value="삭제" id="postDelete" name="postDelete">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script>
+        $(function () {
+            $("#header").load("<%= request.getContextPath() %>/header.jsp");
+            $("#footer").load("<%= request.getContextPath() %>/footer.jsp");
+        });
+
+        $("#postModify").on("click", function () {
+            location.href = "<%=request.getContextPath() %>/sub/board/noticeModify.jsp";
+        });
+
+        $("#postDelete").on("click", function () {
+            vdelete = confirm("해당 글을 삭제하시겠습니까?");
+            if (vdelete == true) {
+                // 글삭제
+
+                history.back();
+            }
+        })
+    </script>
+</body>
+
+</html>

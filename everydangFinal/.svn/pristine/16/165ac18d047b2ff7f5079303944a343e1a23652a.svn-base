@@ -1,0 +1,68 @@
+package com.everydang.vo;
+
+public class CommentVO {
+	private String cm_no;
+	private String ps_no;
+	private String mm_id;
+	private String cm_content;
+	private String cm_date;
+	private int cm_secret;
+	private int cm_noti;
+
+	public String getCm_no() {
+		return cm_no;
+	}
+
+	public void setCm_no(String cm_no) {
+		this.cm_no = cm_no;
+	}
+
+	public String getPs_no() {
+		return ps_no;
+	}
+
+	public void setPs_no(String ps_no) {
+		this.ps_no = ps_no;
+	}
+
+	public String getMm_id() {
+		return mm_id;
+	}
+
+	public void setMm_id(String mm_id) {
+		this.mm_id = mm_id;
+	}
+
+	public String getCm_content() {
+		return cm_content;
+	}
+
+	public void setCm_content(String cm_content) {
+		this.cm_content = cm_content;
+	}
+
+	public String getCm_date() {
+		return cm_date;
+	}
+
+	public void setCm_date(String cm_date) {
+		this.cm_date = cm_date;
+	}
+
+	public int getCm_secret() {
+		return cm_secret;
+	}
+
+	public void setCm_secret(int cm_secret) {
+		this.cm_secret = cm_secret;
+	}
+
+	public int getCm_noti() {
+		return cm_noti;
+	}
+
+	public void setCm_noti(int cm_noti) {
+		this.cm_noti = cm_noti;
+	}
+
+}

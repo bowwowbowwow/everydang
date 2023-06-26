@@ -1,0 +1,144 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPagePost</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/myPage/myPagePost.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="myProfile">
+            <div id="profileDetail">
+                <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="">
+                <span id="level">정</span>
+                <span id="nickName">애블댕</span>
+            </div>
+        </div>
+        <div id="container">
+            <nav id="menu">
+                <h3 class="menuTitle">마이페이지</h3>
+                <ul id="mypage">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageUpdate.jsp">회원정보 확인/수정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageDM.jsp">my 쪽지</a></li>
+                </ul>
+                <h3 class="menuTitle">내 활동</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPagePost.jsp" class="active">my 글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReply.jsp">my 댓글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageScrape.jsp">스크랩</a></li>
+                </ul>
+                <h3 class="menuTitle">내 쇼핑</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageOrder.jsp">my 주문</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReview.jsp">my 리뷰</a></li>
+                </ul>
+                <a href="<%=request.getContextPath()%>/sub/faq/faq.jsp">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-question.png" alt="question"> <span>자주 묻는 질문</span>
+                    </i>
+                </a>
+                <a href="#">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-logout.png" alt="logout"> <span>로그아웃</span>
+                    </i>
+                </a>
+            </nav>
+
+
+            <div class="postboard">
+                <p class="postboardtxt">My 글</p><br>
+                <p class="postboardtxt2">총 <span class="spantext">17</span>개의 글을 작성하셨습니다</p>
+                    
+                
+                    <div class="post">
+                        <div class="title">
+                            사용자가 쓴 게시물 타이틀이 노출됩니다
+                        </div>
+                        <div class="date"><br>
+                            2023-06-12
+                        </div>
+                        <br><br>
+                        <div class="content">
+                            <p>프로젝트가 본격적으로(?) 시작했습니다! 우리는 css를 하고 있습니다. 하늘이랑 서연이랑 혜진이는
+                                이미 마쳤고, 소연이도 거의 마무리 단계라고 합니당. 제가 제일 느린데 다들 도와준다고 해서 너무너무 고맙습니다
+                                디자인에 글이 세 줄 정도 있는데, 다 채워야 할 것 같은 기분이라서 막 갈기고 있습니다. 와! 세 줄 채웠다!!!
+                                이런 ㅁㅊ 버튼 만드는 거 깜빡함
+                            </p>
+
+                            <div class="contentbotton">
+                            <form>
+                                <input type="button" class="modify" value="수정">
+                                <input type="submit" class="delete" value="삭제">
+                            </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="title">
+                            사용자가 쓴 게시물 타이틀이 노출됩니다
+                        </div>
+                        <div class="date"><br>
+                            2023-06-12
+                        </div>
+                        <br><br>
+                        <div class="content">
+                            <p>프로젝트가 본격적으로(?) 시작했습니다! 우리는 css를 하고 있습니다. 하늘이랑 서연이랑 혜진이는
+                                이미 마쳤고, 소연이도 거의 마무리 단계라고 합니당. 제가 제일 느린데 다들 도와준다고 해서 너무너무 고맙습니다
+                                디자인에 글이 세 줄 정도 있는데, 다 채워야 할 것 같은 기분이라서 막 갈기고 있습니다. 와! 세 줄 채웠다!!!
+                            </p>
+
+                            <div class="contentbotton">
+                                <form>
+                                    <input type="button" class="modify" value="수정">
+                                    <input type="submit" class="delete" value="삭제">
+                                </form>
+                                </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="title">
+                            사용자가 쓴 게시물 타이틀이 노출됩니다
+                        </div>
+                        <div class="date"><br>
+                            2023-06-12
+                        </div>
+                        <br><br>
+                        <div class="content">
+                            <p>프로젝트가 본격적으로(?) 시작했습니다! 우리는 css를 하고 있습니다. 하늘이랑 서연이랑 혜진이는
+                                이미 마쳤고, 소연이도 거의 마무리 단계라고 합니당. 제가 제일 느린데 다들 도와준다고 해서 너무너무 고맙습니다
+                                디자인에 글이 세 줄 정도 있는데, 다 채워야 할 것 같은 기분이라서 막 갈기고 있습니다. 와! 세 줄 채웠다!!!
+                            </p>
+
+                            <div class="contentbotton">
+                                <form>
+                                    <input type="button" class="modify" value="수정">
+                                    <input type="submit" class="delete" value="삭제">
+                                </form>
+                                </div>
+
+                        </div>
+                    </div>
+
+    </div>
+
+
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.html");
+        $("#footer").load("<%=request.getContextPath()%>/footer.html");
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+package com.everydang.everything.service;
+
+import java.util.List;
+
+import com.everydang.everything.dao.EverythingDAO;
+import com.everydang.everything.dao.IEverythingDAO;
+import com.everydang.vo.CartVO;
+import com.everydang.vo.OptionVO;
+import com.everydang.vo.ProductVO;
+
+public class EverythingService implements IEverythingService{
+	// dao instance
+	public IEverythingDAO dao;
+	// Singleton
+	private static EverythingService service;
+	
+	public static EverythingService getInstance() {
+		if(service == null) service = new EverythingService();
+		
+		return service;
+	}
+	// Constructor
+	public EverythingService() {
+		dao = EverythingDAO.getInstance();
+	}
+	
+	@Override
+	public List<ProductVO> selectAllProduct() {
+		return dao.selectAllProduct();
+	}
+	
+	@Override
+	public ProductVO selectProduct(String code) {
+		return dao.selectProduct(code);
+	}
+	@Override
+	public List<OptionVO> selectAllOption(String prCode) {
+		return dao.selectAllOption(prCode);
+	}
+
+	@Override
+	public List<OptionVO> selectAllFile(String prCode) {
+		return dao.selectAllFile(prCode);
+	}
+	@Override
+	public CartVO selectAllCart(String memId, String prCode) {
+		// TODO Auto-generated method stub
+		return dao.selectAllCart(memId,prCode);
+	}
+
+}

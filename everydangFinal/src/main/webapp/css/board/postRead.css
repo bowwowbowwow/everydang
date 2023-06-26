@@ -1,0 +1,283 @@
+@import url("../common.css");
+
+#container {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+#category {
+	margin-top: 130px;
+	font-size: 1.8rem;
+	padding-bottom: 16px;
+	margin-bottom: 32px;
+}
+
+#category>a {
+	color: var(--color-blue);
+}
+
+#postHeader {
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--font-desabled);
+	margin-bottom: 48px;
+}
+
+#subject {
+	font-size: 3.2rem;
+	color: var(--font-high);
+	margin-bottom: 64px;
+}
+
+#postWriterInfoBox, #commentWriterInfoBox, .replyWriterInfoBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#postWriterInfo, .commentWriterInfo, .replyWriterInfo {
+	display: flex;
+	align-items: center;
+}
+
+#postWriterInfo img, .commentWriterInfo img, .replyWriterInfo img {
+	width: 36px;
+	height: 36px;
+	margin-right: 4px;
+}
+
+#postWriterDate, .commentWriterDate, .replyWriterDate {
+	display: flex;
+	flex-direction: column;
+	height: 36px;
+	justify-content: space-around;
+}
+
+#postWriter, .commentWriter, .replyWriter {
+	font-size: 1.4rem;
+	color: var(--font-high);
+}
+
+#postDate, .commentDate, .replyDate {
+	font-size: 1.2rem;
+	color: var(--font-high);
+}
+
+#postTopButtons {
+	display: flex;
+	align-items: center;
+}
+
+.img, #like, #scrap {
+	width: 28px;
+	height: 28px;
+	margin-left: 16px;
+}
+
+#like {
+	background: url("../../image/icon/icon-like-out.png");
+	background-size: 28px;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+#like.active {
+	background-image: url("../../image/icon/icon-like-on.png");
+}
+
+#scrap {
+	background: url("../../image/icon/icon-scrap-off.png");
+	background-size: 28px;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+#scrap.active {
+	background-image: url("../../image/icon/icon-scrap-on.png");
+}
+
+.count {
+	font-size: 1.4rem;
+	margin-left: 4px;
+}
+
+#postContentBox {
+	padding-bottom: 55px;
+	line-height: 2rem;
+}
+
+#postContentBox {
+	font-size: 1.7rem !important;
+	color: (--color-black);
+	
+}
+
+#postContentBox>img {
+	margin: 10px auto;
+}
+
+
+#postFooter {
+	display: flex;
+	border-bottom: 1px solid var(--color-grey-300);
+	padding-bottom: 16px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+
+#tags {
+	display: flex;
+}
+
+.tag {
+	background-color: var(--color-grey-200);
+	color: var(--font-high);
+	border-radius: 50px;
+	padding: 5px 10px;
+	height: 24px;
+	text-align: center;
+	border: 1px solid var(--color-grey-100);
+	margin-right: 8px;
+	font-size: 1.4rem;
+}
+
+input[type=button], input[type=submit] {
+	width: 72px;
+	height: 24px;
+	border-radius: 4px;
+	border: 1px solid var(--color-blue);
+	font-size: 1.4rem;
+	color: var(--color-black);
+	background-color: white;
+	margin-left: 16px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+input[type=button]:hover, input[type=button]:active {
+	width: 72px;
+	height: 24px;
+	border-radius: 4px;
+	background-color: var(--color-blue);
+	font-size: 1.4rem;
+	color: var(--color-white);
+	margin-left: 16px;
+	padding: 0px;
+}
+
+#postModify, #postDelete, .commentModify, .commentDelete, .replyModify,
+	.replyDelete, .secretReply {
+	display: none;
+}
+
+.on {
+	display: block !important;
+}
+
+#postBottomButtons {
+	display: flex;
+}
+
+.commentButtons {
+	display: flex;
+}
+#commentWriteArea {
+	margin: 24px auto;
+}
+
+textarea {
+	width: 100%;
+	box-shadow: var(--shadow-3);
+	height: 80px;
+	border: none;
+	padding: 10px;
+	resize: none;
+	margin: 24px auto;
+}
+
+textarea::placeholder {
+	color: var(--color-blue);
+}
+
+#commentAreaHeader {
+	display: flex;
+	font-size: 1.4rem;
+	padding-bottom: 16px;
+	border-bottom: 1px solid var(--color-grey-300);
+}
+
+.commentAreaBody {
+	border-bottom: 1px solid var(--color-grey-300);
+	padding: 50px;
+}
+
+.commentAreaBody.userView p {
+	font-size: 1.4rem;
+	width: 100%;
+	margin-left: 37px;
+}
+
+#countComment {
+	color: var(--color-blue);
+}
+
+.commentContentBody, .replyContentBody {
+	margin-left: 40px;
+	margin-top: 16px;
+	font-size: 1.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.commentContent, .replyContent, .commentContentSecret {
+	width: 70%;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+
+.replyAreaBox {
+	margin-top: 48px;
+	padding-left: 40px;
+}
+
+.replyReadArea {
+	margin: 24px auto;
+}
+
+#commentRegisterButton, .replyRegisterButton {
+	display: flex;
+}
+
+#commentRegister, #replyRegister {
+	margin-left: 24px;
+}
+
+#commentSecretCheckBox, .replySecretCheckBox {
+	display: flex;
+	align-items: center;
+}
+
+label[for=commentSecretCheck], label[for=replySecretCheck] {
+	margin-left: 4px;
+	font-size: 1.4rem;
+}
+
+#commentSecretCheck, #replySecretCheck {
+	position: relative;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+#commentSecretCheck::after, #replySecretCheck::after {
+	opacity: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url("../../image/icon/icon-check-box-checked.png") 100%/cover;
+}
+
+#commentSecretCheck:checked::after, #replySecretCheck:checked::after {
+	opacity: 1;
+}

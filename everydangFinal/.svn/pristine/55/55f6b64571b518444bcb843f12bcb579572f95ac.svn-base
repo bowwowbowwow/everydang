@@ -1,0 +1,267 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPageDM</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/myPage/myPageDM.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="myProfile">
+            <div id="profileDetail">
+                <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="">
+                <span id="level">정</span>
+                <span id="nickName">애블댕</span>
+            </div>
+        </div>
+        <div id="container">
+            <nav id="menu">
+                <h3 class="menuTitle">마이페이지</h3>
+                <ul id="mypage">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageUpdate.jsp">회원정보 확인/수정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageDM.jsp" class="active">my 쪽지</a></li>
+                </ul>
+                <h3 class="menuTitle">내 활동</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPagePost.jsp">my 글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReply.jsp">my 댓글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageScrape.jsp">스크랩</a></li>
+                </ul>
+                <h3 class="menuTitle">내 쇼핑</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageOrder.jsp">my 주문</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReview.jsp">my 리뷰</a></li>
+                </ul>
+                <a href="<%=request.getContextPath()%>/sub/faq/faq.jsp">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-question.png" alt="question"> <span>자주 묻는 질문</span>
+                    </i>
+                </a>
+                <a href="#">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-logout.png" alt="logout"> <span>로그아웃</span>
+                    </i>
+                </a>
+            </nav>
+            <div id="myDM">
+                <ul id="DMlist">
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile2.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~ 다시 연락주세요~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile3.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">다음에 또 연락해주세요~ 저는 댕댕이입니다</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile6.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile7.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile8.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile9.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile10.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile11.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile1.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile2.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="DMprofile">
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile3.png" alt="profile1">
+                            <p class="user">
+                                <span class="sendUser">댕댕이</span>
+                                <span class="DM">어제 너무 재미있었어요~ 정말로~</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <div id="DMmain">
+                    <div id="DMnone">
+                        <img src="<%=request.getContextPath()%>/image/logo/logo-symbol.png" alt="">
+                        <h1>에브리댕 쪽지</h1>
+                        <p>에브리댕 친구들에게 메시지를 보내보세요.</p>
+                    </div>
+                    <div id="DMbox">
+                        <div class="messageLog">
+                            <div class="messageDay">
+                                <span class="date">2023-05-24</span>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">하이하이</p>
+                                </div>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">안녕하세요~~!</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">강아지 사료 괜찮나요?</p>
+                                </div>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">넹 <br> 많이 먹어서 돼지 됐어용! ㅎㅎ</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                            </div>
+                            <div class="messageDay">
+                                <span class="date">2023-05-26</span>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">오랜만입니다</p>
+                                </div>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">잘지내시는지?</p>
+                                </div>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">그럼요. 저는 잘 지냅니다!</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                            </div>
+                            <div class="messageDay">
+                                <span class="date">2023-06-01</span>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">어제 잘 들어갔어?</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">응! 어제 즐거웠다 그치?</p>
+                                </div>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">^0^ <br> 다음에 또 만나는 거 어때?</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                            </div>
+                            <div class="messageDay">
+                                <span class="date">2023-06-07</span>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">내일 만날래?</p>
+                                </div>
+                                <div class="chatBoxsend chatBox">
+                                    <p class="sendMessage text">좋지!</p>
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="profile">
+                                </div>
+                                <div class="chatBoxReceive chatBox">
+                                    <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile5.png" alt="profile">
+                                    <p class="receiveMessage text">뭐 먹고 싶어?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form id="textInput">
+                            <input type="text" name="inputText" id="inputText">
+                            <button type="submit" id="textBtn">보내기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.html");
+        $("#footer").load("<%=request.getContextPath()%>/footer.html");
+
+        $(".DMprofile a").on("click", function(){
+            $(this).removeAttr("href");
+            $("#DMnone").css("display","none");
+            $("#DMbox").css("display","block");
+        })
+    </script>
+</body>
+</html>

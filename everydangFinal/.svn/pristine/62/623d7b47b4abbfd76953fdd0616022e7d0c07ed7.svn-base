@@ -1,0 +1,218 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my주문 | 마이페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/myPage/myShopping.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+
+    
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="myProfile">
+            <div id="profileDetail">
+                <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="">
+                <span id="level">정</span>
+                <span id="nickName">애블댕</span>
+            </div>
+        </div>
+        <div id="container">
+            <nav id="menu">
+                <h3 class="menuTitle">마이페이지</h3>
+                <ul id="mypage">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageUpdate.jsp">회원정보 확인/수정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageDM.jsp">my 쪽지</a></li>
+                </ul>
+                <h3 class="menuTitle">내 활동</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPagePost.jsp">my 글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReply.jsp">my 댓글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageScrape.jsp">스크랩</a></li>
+                </ul>
+                <h3 class="menuTitle">내 쇼핑</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageOrder.jsp" class="active">my 주문</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReview.jsp">my 리뷰</a></li>
+                </ul>
+                <a href="<%=request.getContextPath()%>/sub/faq/faq.jsp">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-question.png" alt="question"> <span>자주 묻는 질문</span>
+                    </i>
+                </a>
+                <a href="#">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-logout.png" alt="logout"> <span>로그아웃</span>
+                    </i>
+                </a>
+            </nav>
+            <div class="postboard-wrap">
+                <div class="postboard">
+                    <p class="postboardtxt">A123456</p>
+                    <div class="info-view">
+                        <div class="order-info">
+                            <div class="info-wrap">
+                                <p class="info-title">주문내역</p>
+                                <div class="info-lists">
+                                    <div class="info-item">
+                                        <div class="prod-info">
+                                            <p id="prod-name">에브리댕 텀블러</p>
+                                            <p class="prod-option">
+                                                <span id="prod-price">39000</span>원 / 수량 <span id="prod-total">2</span>개
+                                            </p>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <form action="#">
+                                                <button href="#" class="btn" id="btn-review" data-bs-toggle="modal" data-bs-target="#reviewModal">리뷰쓰기</button>
+                                                <button href="#" class="btn" id="btn-refund">주문취소/환불</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="prod-info">
+                                            <p id="prod-name">에브리댕 텀블러</p>
+                                            <p class="prod-option">
+                                                <span id="prod-price">39000</span>원 / 수량 <span id="prod-total">2</span>개
+                                            </p>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <form action="#">
+                                                <button href="#" class="btn" id="btn-review" data-bs-toggle="modal" data-bs-target="#reviewModal">리뷰쓰기</button>
+                                                <button href="#" class="btn" id="btn-refund">주문취소/환불</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credit-info">
+                            <div class="info-wrap">
+                                <p class="info-title">결제 정보</p>
+                                <div class="info-lists">
+                                    <div id="credit-method" class="text-info">
+                                        <p class="title">결제수단</p>
+                                        <span class="txt">카카오페이</span>
+                                    </div>
+                                    <div id="credit-price" class="text-info">
+                                        <div class="left">
+                                            <div class="price text-info">
+                                                <p class="title">주문금액</p>
+                                                <span class="txt">39,000원</span>
+                                            </div>
+                                            <div class="price-delivery text-info">
+                                                <p class="title">배송비</p>
+                                                <span class="txt">5,000원</span>
+                                            </div>
+                                            <div class="point text-info">
+                                                <p class="title">포인트</p>
+                                                <span class="txt">5,000</span>
+                                            </div>
+                                        </div>
+                                        <div class="credit-total text-info">
+                                            <p class="title">결제금액</p>
+                                            <span class="txt"><i id="total">39,000</i>원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-info">
+                            <div class="info-wrap">
+                                <p class="info-title">배송지 정보</p>
+                                <div class="info-lists">
+                                    <div class="text-info">
+                                        <div class="text-info-item">
+                                            <p class="title">수령인</p>
+                                            <span class="txt" id="receiver">김자바</span>
+                                        </div>
+                                        <div class="text-info-item">
+                                            <p class="title">연락처</p>
+                                            <span class="txt" id="user-tel">010-1234-5678</span>
+                                        </div>
+                                        <div class="text-info-item">
+                                            <p class="title">주소</p>
+                                            <span class="txt" id="user-addr">대전광역시 중구 계백로 1715 에블댕 아파트 104호</span>
+                                        </div>
+                                        <div class="text-info-required">
+                                            <p class="title">요청사항</p>
+                                            <span class="txt" id="user-required">관리사무소에 맡겨주세요.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <footer id="footer"></footer>
+    <!-- Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-title">리뷰쓰기</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-top">
+                    <p class="info"><span id="prod-name">에브리댕 텀블러</span></p>
+                </div>
+                <div class="modal-form">
+                    <form action="#">
+                        <fieldset>
+                            <h2 class="form-title">별점</h2>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="like" class="like" id="like-1" data-num="1">
+                                    <label for="like-1" class="radio-label">1점</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="like" class="like" id="like-2" data-num="2">
+                                    <label for="like-2" class="radio-label">2점</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="like" class="like" id="like-3" data-num="3">
+                                    <label for="like-3" class="radio-label">3점</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="like" class="like" id="like-4" data-num="4">
+                                    <label for="like-4" class="radio-label">4점</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="like" class="like" id="like-5" data-num="5">
+                                    <label for="like-5" class="radio-label">5점</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <div class="review-write">
+                                <h2 class="form-title">리뷰쓰기</h2>
+                                <div class="textArea-wrap">
+                                    <textarea name="textArea" id="textArea" style="width: 100%;" placeholder="리뷰 작성하기 (최대 100자)"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="btn-wrap">
+                        <button type="submit" class="btn btn-primary" id="btn-review-submit">작성하기</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.jsp");
+        $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+    </script>
+</body>
+</html>

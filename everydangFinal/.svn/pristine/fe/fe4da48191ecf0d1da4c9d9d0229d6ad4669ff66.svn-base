@@ -1,0 +1,55 @@
+        <div class="headWrap container">
+            <div class="h-left">
+                <h1 class="logo"><a href="./index.html">에브리댕</a></h1>
+                <ul class="gnb">
+                    <li class="list1"><a href="src/sub/board/bowwowBoard.jsp">커뮤니티</a></li>
+                    <li class="list2"><a href="src/sub/board/bowwowBoard.jsp">찾습니다</a></li>
+                    <li class="list3"><a href="#">멍멍위키</a></li>
+                    <li class="list4"><a href="#">에브리띵</a></li>
+                </ul>
+            </div>
+            <div class="h-right">
+                <div class="search-area">
+                    <div class="search-box">
+                        <p></p>
+                        <form action="#" method="get">
+	                        <input type="text" id="input-search" placeholder="검색">
+                        </form>
+                    </div>
+                </div>
+                <div class="user-area">
+                    <div class="guest">   
+                        <div class="user-login">
+                            
+                            <a href="#">
+                                <i class="icon-user"></i>
+                                로그인</a>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="user-join">
+                            <a href="#">회원가입</a>
+                        </div>
+                    </div>
+                    <!-- <div class="member shop">
+                        <div class="user-cart">
+                            <a href="#">
+                                <i class="icon"></i>
+                            </a>
+                        </div>
+                        <div class="user-alarm">
+                            <a href="#">
+                                <i class="icon"></i>
+                            </a>
+                        </div>
+                        <div class="user-page">
+                            <a href="#" class="thum">
+                                <i></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <!-- <div class="admin">
+                        <a href="#">관리자 페이지</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>

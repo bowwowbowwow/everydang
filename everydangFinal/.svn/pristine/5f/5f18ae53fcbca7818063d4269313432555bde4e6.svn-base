@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findId</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login/login.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+
+
+</head>
+<body>
+    <header id="header"></header>
+<div class="wrap">
+    <div id="container">
+    <img src="<%=request.getContextPath()%>/image/logo/logo-symbol.png" alt="logo-symbol" >
+
+    <div>
+        <p class="find">아이디 찾기</p>
+    </div>
+    
+    <div id=loginform style="display: flex; flex-direction: column;">
+        <form action="<%=request.getContextPath()%>/sub/member/login/findIdSuccessPage.jsp">
+            <input type="text" id="name" placeholder="이름"><br>
+            <input type="text" id="email" placeholder="이메일"><br>
+            <input type="submit" value="아이디 찾기"  style="color: white; background-color: #61BBB9;">
+        </form>
+    </div>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+<script>
+    // header & footer
+    $("#header").load("<%=request.getContextPath()%>/header.jsp");
+    $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+</script>
+
+</body>
+</html>

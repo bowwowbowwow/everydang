@@ -1,0 +1,88 @@
+<%@page import="com.everydang.vo.BoardVO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>공지사항</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/board/listBoard.css">
+    <script src="<%= request.getContextPath() %>/js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <header id="header"></header>
+    <div id="wrap" class="notice">
+        <div id="container">
+            <div id="siteMapBox">
+                <div id="siteMap">
+                    <a href="<%= request.getContextPath() %>/index.jsp"><img src="<%= request.getContextPath() %>/image/icon/icon-home-blue.png" alt="icon-home-blue.png"
+                            id="home"></a>
+                    <img src="<%= request.getContextPath() %>/image/icon/icon-arrow-right.png" alt="icon-arrow-right.png" class="arrow">
+                    <a href="<%=request.getContextPath() %>/noticeList.do" class="siteMapBoard">공지사항</a>
+                </div>
+            </div>
+            <p id="superBoard"><a href="<%=request.getContextPath() %>/noticeList.do">NOTICE</a></p>
+            <div id="postListBox">
+                <div id="postList">
+                    <div id="writeSort">
+                        <a href="wikiWrite.jsp" id="writeButton">
+                            <img src="<%= request.getContextPath() %>/image/icon/icon-edit-blue.png" alt="icon-edit.png" id="writeIcon" />
+                            작성하기
+                        </a>
+                    </div>
+                    <%
+					List<BoardVO> noticeList = (List<BoardVO>) request.getAttribute("noticeList");
+					for(int i = 0; i < noticeList.size(); i++) {
+						BoardVO noticeVO = noticeList.get(i);
+					%>
+                    <div id="post">
+                        <div class="normalPost">
+                            <div class="writerDate">
+                                <a href="#" class="writer"><%=noticeVO.getMm_nickname() %></a>
+                                <p class="date">2023-05-24</p>
+                            </div>
+                            <div class="contents">
+                                <p class="pSubject"><a href="#" class="subject"><%=noticeVO.getPs_subject() %></a></p>
+                                <p class="pContent"><a href="#" class="content"><%=noticeVO.getPs_content() %></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%} %>
+                <div aria-label="Page navigation example" class="page">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><img
+                                    src="<%= request.getContextPath() %>/image/icon/icon-arrow-prev.png" alt="icon-arrow-prev.png" id="prev"></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><img
+                                    src="<%= request.getContextPath() %>/image/icon/icon-arrow-next.png" alt="icon-arrow-next.png" id="next"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        $(function () {
+            $("#header").load("<%= request.getContextPath() %>/header.jsp");
+            $("#footer").load("<%= request.getContextPath() %>/footer.jsp");
+        })
+
+        $(window).scroll(function () {
+            $("#tagBox").css("margin-top", Math.max(0, 0 - $(this).scrollTop()));
+        });
+    </script>
+</body>
+
+</html>

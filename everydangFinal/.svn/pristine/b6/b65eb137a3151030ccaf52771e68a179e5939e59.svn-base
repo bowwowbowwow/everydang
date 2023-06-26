@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>에브리댕</title>
+<!-- swiper -->
+<script src="js/jquery-3.7.0.min.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+    <a href="./index.html" class="logo-marquee">
+        <div class="marquee"></div>
+        <h2 class="everydang"></h2>
+    </a>
+    <div id="wrap">
+        <header id="header"></header>
+        <main>
+        <div class="main-wrap container">
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="image/main/main-slide1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/main/main-slide1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/main/main-slide1.png">
+                        </div>
+                    </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                </div>
+                <section id="sec-board">
+                    <div class="board-wrap">
+                        <div class="board board1">
+                            <a href="#" class="board-title">
+                                <i class="thum-title"></i>
+                                <h3>멍멍게시판</h3>
+                            </a>
+                            <div class="board-content">
+                                <ul class="board-lists">
+                                    <li class="board-list board-list1">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list2">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list3">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list4">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list5">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="board board2">
+                            <a href="#" class="board-title">
+                                <i class="thum-title"></i>
+                                <h3>공지사항</h3>
+                            </a>
+                            <div class="board-content">
+                                <ul class="board-lists">
+                                    <li class="board-list board-list1">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list2">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list3">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list4">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list5">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="board board3">
+                            <a href="#" class="board-title">
+                                <i class="thum-title"></i>
+                                <h3>찾습니다</h3>
+                            </a>
+                            <div class="board-content">
+                                <ul class="board-lists">
+                                    <li class="board-list board-list1">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list2">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list3">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list4">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list5">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="board board4">
+                            <a href="#" class="board-title">
+                                <i class="thum-title"></i>
+                                <h3>멍멍위키</h3>
+                            </a>
+                            <div class="board-content">
+                                <ul class="board-lists">
+                                    <li class="board-list board-list1">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list2">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list3">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list4">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="board-list board-list5">
+                                        <div class="user-info">
+                                            <a href="#" class="user">
+                                                <i class="thum"></i>
+                                                시고르자브종
+                                            </a>
+                                            <div class="view">
+                                                <div class="like-wrap">
+                                                    <i class="icon-like icon"></i>
+                                                    <span class="count-like count">25</span>
+                                                </div>
+                                                <div class="comment-wrap">
+                                                    <i class="icon-comment icon"></i>
+                                                    <span class="count-comment count">30</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-title">
+                                            <a href="#">이불'만'물어뜯는 강아지 따로자야할까요
+                                                <span class="date">2023-05-24</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sec-dang">
+                    <h3>#강아지 #댕주접</h3>
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum1.png">
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum2.png">
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum3.png">
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum4.png">
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum3.png">
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <img src="image/main/main-thum4.png">
+                            </a>
+                        </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        
+        
+        new Swiper(".mySwiper1", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {     //자동슬라이드 (false-비활성화)
+            delay: 2500, // 시간 설정
+            disableOnInteraction: true, // false-스와이프 후 자동 재생
+            },
+            
+        });
+
+        new Swiper(".mySwiper2", {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    </script>
+</body>
+</html>

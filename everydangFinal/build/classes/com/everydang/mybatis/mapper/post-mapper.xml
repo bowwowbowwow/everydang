@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="post">
+	<!-- 글 읽는 쿼리 -->
+	<select id="selectPost" parameterType="int" resultType="postVO">
+		select
+		ps_subject,
+		(select mm_nickname from member m where m.mm_id = p.mm_id) mm_nickname,
+		(select mm_profile from member m where m.mm_id = p.mm_id) mm_profile,
+		mm_id,
+		to_char(ps_date, 'yyyy-mm-dd') ps_date,
+		ps_hit,
+		(select count(lk_like) from"LIKE" l where l.ps_no = p.ps_no) lk_like,
+		(select count(cm_no) from "COMMENT" c where c.ps_no = p.ps_no) cm_no,
+		(select count(sc_scrap) from scrap s where s.ps_no = p.ps_no) sc_scrap,
+		ps_content,
+		ps_file,
+		br_code,
+		ps_no,
+		(select tg_tag from tag t where p.ps_no = t.ps_no) tg_tag
+		from post p
+		where
+		ps_no = #{ps_no}
+	</select>
+
+	<!-- 공지사항 작성 쿼리 -->
+	<insert id="insetNotice" parameterType="postVO">
+		insert into post(ps_no,
+		br_code, mm_id, ps_subject, ps_content, ps_date)
+		values
+		(POST_SEQ.nextval, 'notice', #{mm_id}, #{ps_subject}, #{ps_content},
+		sysdate)
+	</insert>
+
+	<!-- 멍멍게시판 글 작성 쿼리 -->
+	<insert id="insertPost" parameterType="postVO">
+		insert into post(ps_no,
+		br_code, mm_id, ps_subject, ps_content, ps_date)
+		values
+		(POST_SEQ.nextval, #{br_code}, #{mm_id}, #{ps_subject}, #{ps_content},
+		sysdate)
+	</insert>
+
+	<!-- 조회수 상승 쿼리 -->
+	<update id="updateHit" parameterType="int">
+		UPDATE post SET ps_hit =
+		ps_hit + 1 WHERE ps_no = #{ps_no}
+	</update>
+
+	<select id="selectHit" resultType="int" parameterType="int">
+		select
+		ps_hit from post where ps_no = #{ps_no}
+	</select>
+
+	<insert id="insertLikeInfo" parameterType="postVO">
+		INSERT INTO "LIKE" l VALUES (#{ps_no}, #{mm_id}, 1)
+	</insert>
+
+	<delete id="deleteLikeInfo" parameterType="postVO">
+		DELETE FROM "LIKE" l
+		WHERE ps_no = #{ps_no} AND mm_id = #{mm_id}
+	</delete>
+
+	<insert id="insertScrapInfo" parameterType="postVO">
+		INSERT INTO scrap VALUES (#{ps_no}, #{mm_id}, 1)
+	</insert>
+
+	<delete id="deleteScrapInfo" parameterType="postVO">
+		DELETE FROM scrap
+		WHERE ps_no = #{ps_no} AND mm_id = #{mm_id}
+	</delete>
+
+	<select id="selectPostInfo" resultType="postVO"
+		parameterType="int">
+		select * from post where ps_no = #{ps_no}
+	</select>
+
+	<update id="updatePostInfo" parameterType="postVO">
+		UPDATE post SET
+		ps_subject = #{ps_subject}, ps_content = #{ps_content} where ps_no =
+		#{ps_no} and br_code = #{br_code}
+	</update>
+
+	<delete id="deletePost" parameterType="postVO">
+		{call declare
+		begin
+		DELETE FROM "LIKE" l WHERE mm_id = #{mm_id} AND ps_no = #{ps_no};
+		DELETE FROM "COMMENT" c WHERE mm_id = #{mm_id} AND ps_no = #{ps_no};
+		DELETE FROM post WHERE mm_id = #{mm_id} AND ps_no = #{ps_no};
+		end
+		}
+	</delete>
+
+	<select id="selectMemberInfo" resultType="postVO" parameterType="String">
+		select * from member where mm_id = #{mm_id}
+	</select>
+
+	<select id="selectLikeOn" parameterType="Map"
+		resultType="int">
+		select lk_like from "LIKE" where mm_id = #{mm_id} and ps_no = #{ps_no}
+	</select>
+
+	<select id="selectScrapOn" parameterType="Map"
+		resultType="int">
+		select sc_scrap from scrap where mm_id = #{mm_id} and ps_no
+		= #{ps_no}
+	</select>
+</mapper>

@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 | 에브리띵</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/everything/everythingCart.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+	<% String memId = (String) session.getAttribute("memId"); %>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <!-- 탭 -->
+            <div id="tabBox">
+                <div id="tabSub">
+                    <a href="<%=request.getContextPath()%>/sub/everything/everythingWish.jsp" class="btnLeft tab selected">
+                        <p id="cartTab">장바구니</p>
+                    </a>
+                    <a href="<%=request.getContextPath()%>/sub/everything/everythingWish.jsp" class="btnRight tab">
+                        <p id="wishTab">위시리스트</p>
+                    </a>
+                </div>
+            </div>
+            <!-- 장바구니 & 결제하기 -->
+            <div id="both">
+                <!-- 장바구니 -->
+                <div id="cart">
+                    <div class="cartBox">
+                        <div class="left">
+                            <div class="title">
+                                <a href="everythingDetail.jsp">
+                                    <img src="<%=request.getContextPath()%>/image/sub/shop/shop-cart-prod5.png" alt="item" style="width: 90px;">
+                                </a>
+                                <div class="text">
+                                    <p class="itemTitle">에브리댕 텀블러</p>
+                                    <p class="itemPrice">39,000원</p>
+                                    <p class="itemOption">옵션: 컬러-레드</p>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <div class="itemSelect">
+                                    <select name="selectOption" class="selectOption">
+                                        <option value="two">옵션: 컬러-레드</option>
+                                        <option value="three">옵션: 컬러-블랙</option>
+                                        <option value="four">옵션: 컬러-블루</option>
+                                        <option value="five">옵션: 컬러-핑크</option>
+                                    </select>
+                                </div>
+                                <div id="volume">
+                                    <button class="volumeBox minus"></button>
+                                    <span class="opText">1</span>
+                                    <button class="volumeBox plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button class="x"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 결제하기 -->
+                <div id="pay">
+                    <div id="fixed">
+                        <div id="top">
+                            <h3>결제 예정 금액</h3>
+                        </div>
+                        <div id="middle">
+                            <div id="total" class="middleDisplay">
+                                <span class="mText">총 제품 금액</span>
+                                <span class="mCost">128,000원</span>
+                            </div>
+                            <div id="deliver" class="middleDisplay">
+                                <span class="mText">배송비</span>
+                                <span class="mCost">3,000원</span>
+                            </div>
+                            <div id="point" class="middleDisplay"   >
+                                <span class="mText">포인트 사용</span>
+                                <span class="mCost"><strong>5,000</strong>원</span>
+                            </div>
+                        </div>
+                        <div id="bottom">
+                            <span class="totalCost">합계</span>
+                            <span class="totalCost"><strong>133,000</strong> 원</span>
+                        </div>
+                        <a href="<%=request.getContextPath()%>/sub/everything/everythingPay.jsp" id="payBtn">주문하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.jsp");
+        $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+    </script>
+</body>      
+</html>

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url("../common.css");
+
+body {
+    background-color: var(--color-bg1);
+    padding-top: 66px;
+}
+
+
+#wrap{
+    background-color: var(#fbfbfb);
+}
+
+#header{
+    z-index: 2;
+}
+
+#submit{
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: var(--color-blue);
+    border-radius: 3px;
+    border: 1px solid var(--color-blue);
+    color: var(--color-white);
+}
+
+a{
+    font-size: 1.2rem;
+    color: var(--color-grey-600);
+}
+
+.updatemaintxt, .updatemainmail{
+    font-size: 1.2rem;
+}
+
+.updatemain{
+    margin: 65px;
+    padding: 20px;
+    width: 800px;
+/* 
+    height: 170px;
+     */
+    box-shadow: var(--shadow-1);
+    background-color: var(--color-white);
+    border-radius: 2px;
+}
+
+.telmailbox{
+	display : flex;
+    gap: 20px;
+}
+
+
+.name, .nickname, .password, .tel, .mail, .addr2 {
+    width: 330px;
+    height: 30px;
+    margin-top: 5px;
+    border: 1px solid var(--color-grey-400);
+    border-radius: 3px;
+    
+}
+
+
+
+#addr{
+    height: 30px;
+    margin-top: 5px;
+    width: 230px;
+    border: 1px solid var(--color-grey-400);
+    border-radius: 3px;
+}
+
+#addrsearch{
+    margin-left: 6px;
+    height: 30px;
+    width: 90px;
+    background-color: var(--color-blue);
+    border-radius: 3px;
+    border: 1px solid var(--color-blue);
+    color: var(--color-white);
+}
+
+
+
+.txt{
+    font-size: 1.6rem;
+}
+
+.txt2{
+    font-size: 1.0rem;
+    color: var(--font-medium);
+}
+
+
+div{
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+}
+/* profile */
+#myProfile {
+    background: #fff;
+}
+
+#profileDetail {
+    width: 1200px;
+    margin: auto; 
+    padding: 32px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#profileDetail img {
+    width: 80px;
+    margin-right: 24px;
+}
+
+#profilemodify {
+    padding: 32px 0px;
+    display: flex;
+    align-items: center;
+    position : relative;
+}
+
+#profilemodify img {
+    width: 80px;
+    margin-right: 24px;
+}
+
+#profilemodifyicon{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+#profilemodifyicon img{
+    width: 40px;
+}
+
+#level {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--color-red);
+    border-radius: var(--border-radiusround);
+    font-size: 0.8rem;
+    color: var(--color-red);
+    text-align: center;
+    line-height: 15px;
+    margin-right: 8px;
+}
+#nickName {
+    color: var(--font-medium);
+    font-size: 2.0rem;
+    font-weight: 700;
+
+}
+/* container */
+#container {
+    width: 1200px;
+    margin: auto; 
+    display: flex;
+}
+
+/* 메뉴 */
+#menu {
+    width: 222px;
+    padding: 75px 0px;
+}
+
+#menu h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--font-medium);
+    height: 31px;
+    margin-bottom: 12px;
+    padding: 0 12px;
+}
+
+#menu li a.active {
+    background: #fff;
+    color: var(--color-blue);
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+#menu li a {
+    display: block;
+    color: var(--color-grey-400);
+    font-size: 1.5rem;
+    height: 32px;
+    padding: 0 12px;
+}
+#menu li a:hover {
+    opacity: .8;
+    transition: .5s;
+}
+#menu ul {
+    margin-bottom: 49px;
+}
+#menu>a {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--font-medium);
+    padding: 0 12px;
+}
+#menu>a i {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+}
+#menu a img {
+    width: 16px;
+}
+
+/* right */
+#myActivities {
+    width: 978px;
+    padding: 75px 54px;
+}
+
+#myActivities #activityTitle {
+    padding: 14px 16px;
+    height: 45px;
+    background: #fff;
+    font-size: 1.8rem;
+    color: var(--font-high);
+    box-shadow: var(--shadow-3);
+    border-radius: var(--border-radius8);
+    margin-bottom: 12px;
+}
+
+#activities {
+    display: flex;
+    height: 182px;
+    background: #fff;
+    box-shadow: var(--shadow-3);
+    border-radius: var(--border-radius8);
+    margin-bottom: 48px;
+}
+#activities .a {
+    text-align: center;
+    flex: 1;
+    margin: 40px 0px;
+}
+
+#activities .a img {
+    width: 30px;
+}
+
+#activities .a>span {
+    display: block;
+    margin: 8px 0px 12px 0px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--font-medium);
+}
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select a {
+    color: var(--color-blue);
+    font-size: 3.0rem;
+}
+.select span {
+    margin-left: 4px;
+    font-size: 1.8rem;
+    color: var(--font-medium);
+}

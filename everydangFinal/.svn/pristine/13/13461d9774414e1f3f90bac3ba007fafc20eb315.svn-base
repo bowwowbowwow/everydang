@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logInAdmin</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login/login.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+
+    <style>
+        #id{
+            background-image : url('<%=request.getContextPath()%>/image/icon/icon-user.png');
+            background-repeat : no-repeat;
+            background-size : 15px;
+            background-position: 7px;
+            padding-left: 30px;
+
+            
+            
+        }
+
+        #password {
+            background-image : url('<%=request.getContextPath()%>/image/icon/icon-lock.png');
+            background-repeat : no-repeat;
+            background-size : 15px;
+            background-position: 7px;
+            padding-left: 30px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header id="header"></header>
+
+<div class="wrap">
+    <div id="container">
+    <img src="<%=request.getContextPath()%>/image/logo/logo-symbol.png" alt="logo-symbol" >
+
+    
+    <div id=loginform style="display: flex; flex-direction: column;">
+        <form>
+            <input type="text" id="id" placeholder="아이디"><br>
+            <input type="password" id="password" placeholder="비밀번호"><br>
+            <input type="submit" value="로그인"  style="color: white; background-color: #61BBB9;">
+        </form>
+    </div>
+    </div>
+</div>
+
+<footer id="footer"></footer>
+<script>
+    // header & footer
+    $("#header").load("<%=request.getContextPath()%>/header.jsp");
+    $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+</script>
+</body>
+</html>

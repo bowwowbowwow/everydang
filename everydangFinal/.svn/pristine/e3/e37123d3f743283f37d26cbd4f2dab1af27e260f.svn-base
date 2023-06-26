@@ -1,0 +1,41 @@
+package com.everydang.vo;
+
+public class CartVO {
+	private String pr_code;
+	private String mm_id;
+	private int cr_count;
+	private int cr_like;
+
+	public String getPr_code() {
+		return pr_code;
+	}
+
+	public void setPr_code(String pr_code) {
+		this.pr_code = pr_code;
+	}
+
+	public String getMm_id() {
+		return mm_id;
+	}
+
+	public void setMm_id(String mm_id) {
+		this.mm_id = mm_id;
+	}
+
+	public int getCr_count() {
+		return cr_count;
+	}
+
+	public void setCr_count(int cr_count) {
+		this.cr_count = cr_count;
+	}
+
+	public int getCr_like() {
+		return cr_like;
+	}
+
+	public void setCr_like(int cr_like) {
+		this.cr_like = cr_like;
+	}
+
+}

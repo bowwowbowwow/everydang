@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import url("../common.css");
+body {
+    padding-top: 66px;
+}
+#header{
+    z-index: 2;
+}
+/* container */
+div#container {
+    margin: auto;
+    width: 1200px;
+}
+
+/* main */
+#main {
+    margin: 24px auto;
+}
+#main img{
+    width: 100%;
+    box-shadow: -4px 3px 11px #d9d9d9;
+    border-radius: var(--border-radius12);
+}
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 315px;
+}
+.swiper-button-next:after, .swiper-button-prev:after  {
+    font-size: 24px !important;
+    color: var(--color-grey-400);
+}
+@media (max-width: 760px) {
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+}
+/* slide */
+#slide {
+    margin-bottom: 128px;
+}
+.Heading{
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 64px auto 48px auto;
+}
+#slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px
+}
+.arrow img{
+    width: 33px;
+}
+.mainItem {
+    width: 315px;
+    text-align: center;
+    height: 600px;
+}
+.mainItem img{
+    width: 100%; 
+    margin-bottom: 32px;
+}
+/* items */
+.hot{
+    display: block;
+    margin: auto;
+    width: 54px;
+    height: 20px;
+    background-color: var(--color-red);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 23px;
+    color: #fff;
+    opacity: 0;
+    font-size: 1.0rem;
+}
+
+.hotItem {
+    opacity: 1;
+}
+.itemTitle {
+    font-size: 1.6rem;
+    margin: 8px 0px;
+}
+.itmePrice {
+    font-size: 1.6rem;
+}
+
+/* 전체 상품 */
+#itemList {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(3,1fr);
+	gap: 12px;
+}
+
+.allItem {
+    text-align: center;
+    height: 419px;
+}
+.allItem img {
+    width: 386px;
+    margin-bottom: 32px;
+}

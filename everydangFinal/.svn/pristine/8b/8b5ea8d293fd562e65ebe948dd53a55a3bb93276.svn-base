@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPageOrder</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/myPage/myPageOrder.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="myProfile">
+            <div id="profileDetail">
+                <img src="<%=request.getContextPath()%>/image/user-profile/icon-user-profile4.png" alt="">
+                <span id="level">정</span>
+                <span id="nickName">애블댕</span>
+            </div>
+        </div>
+        <div id="container">
+           <nav id="menu">
+                <h3 class="menuTitle">마이페이지</h3>
+                <ul id="mypage">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageUpdate.jsp">회원정보 확인/수정</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageDM.jsp">my 쪽지</a></li>
+                </ul>
+                <h3 class="menuTitle">내 활동</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPagePost.jsp">my 글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReply.jsp">my 댓글</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageScrape.jsp">스크랩</a></li>
+                </ul>
+                <h3 class="menuTitle">내 쇼핑</h3>
+                <ul id="myactivity">
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageOrder.jsp" class="active">my 주문</a></li>
+                    <li><a href="<%=request.getContextPath()%>/sub/member/myPage/myPageReview.jsp">my 리뷰</a></li>
+                </ul>
+                <a href="<%=request.getContextPath()%>/sub/faq/faq.jsp">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-question.png" alt="question"> <span>자주 묻는 질문</span>
+                    </i>
+                </a>
+                <a href="#">
+                    <i>
+                        <img src="<%=request.getContextPath()%>/image/icon/icon-logout.png" alt="logout"> <span>로그아웃</span>
+                    </i>
+                </a>
+            </nav>
+            <div class="postboard">
+              
+                <div class="orderBox">
+                    <a href="#" class="orderNo">A123456 ></a>
+                    <h2 class="orderTitle">에브리댕 텀블러 외 <span class="count">3</span>건</h2>
+                    <span class="date">2023-06-12</span>
+                </div>
+                <div class="orderBox">
+                    <a href="#" class="orderNo">A123456 ></a>
+                    <h2 class="orderTitle">에브리댕 텀블러 외 <span class="count">3</span>건</h2>
+                    <span class="date">2023-06-12</span>
+                </div>
+                <div class="orderBox">
+                    <a href="#" class="orderNo">A123456 ></a>
+                    <h2 class="orderTitle">에브리댕 텀블러 외 <span class="count">3</span>건</h2>
+                    <span class="date">2023-06-12</span>
+                </div>
+                <div class="orderBox">
+                    <a href="#" class="orderNo">A123456 ></a>
+                    <h2 class="orderTitle">에브리댕 텀블러 외 <span class="count">3</span>건</h2>
+                    <span class="date">2023-06-12</span>
+                </div>
+                <div class="orderBox">
+                    <a href="#" class="orderNo">A123456 ></a>
+                    <h2 class="orderTitle">에브리댕 텀블러 외 <span class="count">3</span>건</h2>
+                    <span class="date">2023-06-12</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.html");
+        $("#footer").load("<%=request.getContextPath()%>/footer.html");
+    </script>
+</body>
+</html>

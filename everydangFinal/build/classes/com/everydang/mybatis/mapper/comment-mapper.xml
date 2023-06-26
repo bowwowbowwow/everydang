@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 이 문서는 mybatis에서 처리할 SQL문을 작성하는 문서입니다. -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+       "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comment">
+	<select id="selectAllCommentsPerPost" resultType="commentVO" parameterType="int">
+		SELECT 
+			(SELECT mm_nickname FROM "MEMBER" m WHERE m.mm_id = c.mm_id) mm_nickname, 
+			(SELECT mm_profile FROM "MEMBER" m WHERE m.mm_id = c.mm_id) mm_profile, 
+			cm_no, 
+			ps_no, 
+			mm_id, 
+			CM_CONTENT, 
+			to_char(cm_date, 'yyyy-mm-dd') cm_date,
+			cm_reno
+		FROM "COMMENT" c
+		WHERE ps_no = #{ps_no}
+	</select>
+	
+	<select id="selectCommentPerPost" resultType="commentVO" parameterType="int">
+		select * from "COMMENT" where ps_no = #{ps_no}
+	</select>
+	
+	<insert id="insertNewComment" parameterType="commentVO">
+		insert into "COMMENT" values (comment_seq.nextval, #{ps_no}, #{mm_id}, #{cm_content}, sysdate, #{cm_secret}, #{cm_noti}, #{cm_reno})
+	</insert>
+	
+	<select id="selectAllReply" parameterType="String" resultType="commentVO">
+		SELECT 
+			(SELECT mm_nickname FROM "MEMBER" m WHERE m.mm_id = c.mm_id) mm_nickname, 
+			cm_no, 
+			ps_no, 
+			mm_id, 
+			CM_CONTENT, 
+			to_char(cm_date, 'yyyy-mm-dd') cm_date,
+			CM_RENO 
+		FROM "COMMENT" c 
+		WHERE CM_RENO = #{cm_reno}
+	</select>
+	
+	<delete id="deleteComment" parameterType="String">
+		delete from "COMMENT" where cm_no = #{cm_no}
+	</delete>
+</mapper>
+
+

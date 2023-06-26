@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+	<!-- 공지사항용 쿼리 -->
+	<select id="selectAllNotice" resultType="boardVO"> 
+		SELECT 
+			br_code,
+			ps_no, 
+			(SELECT mm_nickname FROM MEMBER WHERE mm_id = 'everydang') mm_nickname, 
+			ps_subject, 
+			ps_content, 
+			to_char(ps_date, 'yyyy-mm-dd') ps_date
+		FROM POST 
+		WHERE br_code = 'NOTICE'
+	</select>
+	<!-- 메인에 출력할 쿼리문 -->
+	<select id="selectPostForMain" resultType="boardVO" parameterType="String">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			(SELECT mm_profile FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_profile,
+			ps_subject,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(ls_like) FROM LIKE_SCRAP ls WHERE ls.ps_no = p.ps_no) ls_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = #{br_code} <![CDATA[ rownum <= 11 order by ps_date desc ]]>
+
+	</select>
+	
+	<!-- 리스트형 게시판용 쿼리 -->
+	<!-- 게시판별로 글을 읽어와 게시판에 보여주는 쿼리문 -->
+	<select id="selectPostListBoard" resultType="boardVO" parameterType="String">
+		SELECT
+			br_code,
+			ps_no,
+			(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+			ps_subject,
+			ps_content,
+			to_char(ps_date, 'yyyy-mm-dd') ps_date,
+			(SELECT count(ls_like) FROM LIKE_SCRAP ls WHERE ls.ps_no = p.ps_no) ls_like,
+			(SELECT count(cm_no) FROM "COMMENT" c WHERE c.ps_no = p.ps_no) cm_no
+		FROM POST p 
+		WHERE br_code = #{br_code}
+	</select>
+</mapper>

@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에브리띵</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/everything/everythingMain.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <div id="main">
+                <img src="<%=request.getContextPath()%>/image/sub/shop/shop-main.png" alt="mainImage">
+            </div>
+            <p class="Heading">에브리댕 굿즈 시리즈</p>
+            <!-- 에브리댕 굿즈 시리즈 -->
+            <div id="slide" class="swiper">
+                <div class="swiper-wrapper">
+                        <div class="mainItem swiper-slide">
+                            <a href="<%=request.getContextPath()%>/sub/everything/everythingDetail.jsp">
+                                <img src="<%=request.getContextPath()%>/image/sub/shop/shop-main-top1.png" alt="item1">
+                            </a>
+                            <span class="hot hotItem">HOT</span>
+                            <p class="itemTitle">강아지 인형 VER1 - 강아지</p>
+                            <p class="itmePrice">36,000</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+            </div>
+            <p class="Heading">전체 상품</p>
+            <!-- 전체 상품 -->
+            <div id="itemList">
+                <div class="row">
+                    <div class="allItem">
+                        <a href="everythingDetail.jsp">
+                            <img src="<%=request.getContextPath()%>/image/sub/shop/shop-main-prod8.png" alt="item8">
+                        </a>
+                        <span class="hot hotItem">HOT</span>
+                        <p class="itemTitle">강아지 인형 VER2 - 뼈다귀</p>
+                        <p class="itmePrice">25,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+         // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.jsp");
+        $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+        
+        //swiper
+        var swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        direction: getDirection(),
+        loop: true,
+        autoplay: {     
+            delay: 3500, 
+            disableOnInteraction: false, 
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            resize: function () {
+            swiper.changeDirection(getDirection());
+            },
+        },
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+        return direction;
+    }
+    </script>
+</body>
+</html>

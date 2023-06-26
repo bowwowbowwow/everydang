@@ -1,0 +1,250 @@
+@charset "UTF-8";
+@import url("../common.css");
+@import url("adminHeader.css");
+
+
+
+#container, #dashboard-up, #dashboard-down {
+    display: flex;
+}
+
+#sideMenu {
+    background-color: #F6F6F6;
+    height: 1020px;
+    padding-top: 120px;
+    /* padding: 146px 30px 0px 30px; */
+    
+}
+
+#dashboard, #content {
+    flex:8;
+    margin-top: 115px;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+#dashboard-one, #dashboard-four {
+    flex: 4;
+}
+
+#dashboard-one {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 33%);
+}
+
+#dashboard-two, #dashboard-three {
+    flex: 6;
+}
+/* .dashboard {
+	overflow: hidden;
+} */
+.accordion-item, .accordion-button.collapsed {
+    background: none;
+    
+}
+
+.accordion {
+    background: none;
+    --bs-accordion-border-color: none;
+    --bs-accordion-btn-focus-border-color: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: none;
+    --bs-accordion-active-bg: none;
+    width: 320px;
+}
+
+.accordion-button {
+    width: 266px;
+    margin: 5px auto;
+}
+
+#chatbotMenu {
+    margin-left: 40px;
+    margin-top: 30px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.selectText, #chatbotText {
+    font-size: 1.6rem;
+}
+
+.selectIcon, #chatbotIcon {
+    width: 22px;
+    height: 22px;
+    margin-right: 26px;
+}
+
+#sideMenuHr {
+    width: 250px;
+    margin: 20px auto;
+    color: var(--color-grey-400);
+}
+
+.accordion-body {
+    background-color: white;
+    padding-left: 88px;
+    font-size: 1.6rem;
+}
+
+.accordion-body p, .accordion-body a{
+    padding: 10px 0px;
+    color: var(--color-grey-400);
+}
+a, .accordion-body a:hover {
+    color: var(--color-black);
+}
+
+.dashboard {
+    border: 1px solid var(--color-grey-300);
+    border-radius: var(--border-radius12);
+    box-shadow: var(--shadow-1);
+    margin: 20px;
+}
+
+#dashboard-up {
+    height: 336px;
+}
+
+#dashboard-down {
+    height: 490px;
+}
+
+.db1 {
+    justify-content: space-between;
+}
+
+.db1, .db1-list-title, .db1-list-content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.db1 {
+    margin: 0px 30px;
+}
+
+#totalMember, #newMember {
+    border-bottom: 1px solid var(--color-grey-300);
+}
+
+.db-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+.db1-list-title p, .db1-list-content .count, .dashboard-title p {
+    font-size: 1.8rem;
+}
+
+.changeNum {
+    color: var(--color-blue);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.db1-list-content p{
+    vertical-align: text-bottom;
+}
+
+.dashboard-title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#dashboard-two, #dashboard-three, #dashboard-four {
+    padding: 20px;
+}
+
+.dashboard-table {
+    font-size: 1.4rem;
+}
+
+.listTable {
+    width: 100%;
+    margin-top: 18px;
+    font-size: 1.4rem;
+    table-layout: fixed;
+}
+
+.listTable th {
+    border-top: 2px solid var(--color-grey-400);
+    border-bottom: 2px solid var(--color-grey-400);
+    background-color: var(--color-grey-100);
+
+}
+
+.listTable th, .listTable td {
+    line-height: 29px;
+    height: 29px;
+    padding-right:10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.listTable th:first-child, td:first-child {
+    padding-left: 26px;
+}
+
+.listTable th:last-child, td:last-child {
+    padding-right: 26px;
+}
+
+.listTable th:first-child, .listTable td:first-child {
+    width: 20%;
+}
+.listTable th:nth-child(2), .listTable td:nth-child(2) {
+    width: 15%;
+}
+.listTable th:nth-child(3), .listTable td:nth-child(3) {
+    width: 25%;
+}
+
+.listTable th:nth-child(4), .listTable td:nth-child(4) {
+    width: 25%;
+}
+.listTable th:last-child, .listTable td:last-child {
+    width: 10%;
+}
+.listTable tr:nth-child(n+2):nth-child(-n+7) {
+    border-bottom: 1px solid var(--color-grey-400);
+}
+
+#listTable-two th:last-child, #listTable-two td:last-child {
+    width: 12%;
+}
+
+#listTable-three th:first-child, #listTable-three td:first-child {
+    width: 25%;
+}
+
+#listTable-three th:nth-child(2), #listTable-three td:nth-child(2) {
+    width: 15%;
+}
+
+#listTable-three th:nth-child(3), #listTable-three td:nth-child(3) {
+    width: 30%;
+}
+
+#listTable-three th:nth-child(4), #listTable-three td:nth-child(4) {
+    width: 30%;
+}
+
+#listTable-two tr:nth-child(n+2):nth-child(-n+12),
+#listTable-three tr:nth-child(n+2):nth-child(-n+12) {
+    border-bottom: 1px solid var(--color-grey-400);
+}
+
+table th {
+	font-weight: bold;
+}
+
+
+#footer {
+    margin-top: 0 !important;
+}

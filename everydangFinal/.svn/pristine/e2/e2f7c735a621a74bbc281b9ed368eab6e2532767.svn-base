@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에브리댕 | FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/faq/faq.css">
+    <script src="../../js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <main>
+            <div class="container main-wrap">
+                <div id="title">
+                    <div class="title-wrap">
+                        <div class="site-map">
+                            <a href="../../index.html">
+                                <i class="icon"></i>
+                            </a>
+                            > FAQ
+                        </div>
+                        <div id="title">
+                            <h2>FAQ</h2>
+                            <p class="desc">회원님들이 자주 궁금해하시는 질문</p>
+                        </div>
+                    </div>
+                </div>
+                <section id="faq">
+                    <div class="faq-wrap">
+                        <div id="search-option">
+                            <button class="search-btn active" id="all">전체</button>
+                            <button class="search-btn" id="member">회원관리</button>
+                            <button class="search-btn" id="board">게시판</button>
+                            <button class="search-btn" id="market">댕근마켓</button>
+                            <button class="search-btn" id="event">이벤트</button>
+                            <button class="search-btn" id="shop">에브리띵</button>
+                            <button class="search-btn" id="ect">기타</button>
+                        </div>
+                        <div id="faq-list">
+                            <div class="accordion" id="faq-accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate member">[회원]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate member">[회원]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate member">[회원]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate member">[회원]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate board">[게시판]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate board">[게시판]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate market">[댕근마켓]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate market">[댕근마켓]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading9">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate market">[댕근마켓]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading10">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate event">[이벤트]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading11">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate event">[이벤트]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate shop">[에브리띵]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading13">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate shop">[에브리띵]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading14">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate shop">[에브리띵]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading15">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate shop">[에브리띵]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading16">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate shop">[에브리띵]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading16">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="cate ect">[기타]</span>
+                                        재테크 초보자를 위한 금융 상식 가이드
+                                    </button>
+                                    </h2>
+                                    <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#faq-accordion">
+                                    <div class="accordion-body">
+                                        호두송이를 맨손으로 깠다가는 옴이 오르기 쉽다는 말 같은 건 아무렇지도 않았다. 그리고는, 안고 온 꽃묶음 속에서 가지가 꺾이고 꽃이 일그러진 송이를 골라 발 밑에 버린다. 소녀와 헤어져 돌아오는 길에, 소년은 혼잣속으로, 소녀가 이사를 간다는 말을 수없이 되뇌어 보았다. 저놈의 독수리, 저놈의 독수리, 저놈의 독수리가 맴을 돌고 있기 때문이다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 소녀는 비에 젖은 눈을 들어 한 번 쳐다보았을 뿐, 소년이 하는 대로 잠자코 있었다.
+
+                                        개울가에 다다르기 전에, 가을 하늘은 언제 그랬는가 싶게 구름 한 점 없이 쪽빛으로 개어 있었다. 소녀는 소년이 개울둑에 앉아 있는 걸 아는지 모르는지 그냥 날쌔게 물만 움켜 낸다. 오늘 같은 날은 일찍 집으로 돌아가 집안 일을 도와야 한다는 생각을 잊어버리기라도 하려는 듯이. 그 많던 전답을 다 팔아 버리고, 대대로 살아오던 집마저 남의 손에 넘기더니, 또 악상까지 당하는 걸 보면. 소년은 소녀네 가 이사해 오기 전에 벌써 어른들의 이야기를 들어서, 윤초시 손자가 서울서 사업에 실패해 가지고 고향에 돌아오지 않을 수 없게 되었다는 걸 알고 있었다.
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        faqfnc = function(){
+            const faq = $(".faq-wrap");
+            const faqList = faq.find(".cate").parents(".accordion-item");
+            const all = "all";
+            let btnValue = undefined;
+            const searchBtn = faq.find(".search-btn");
+            searchBtn.on("click",function(){
+                btnValue = $(this).attr("id");
+                searchBtn.removeClass("active");
+                $(this).addClass("active")
+                faqList.each(function(){
+                    var cateClass = $(this).find('.cate').hasClass(btnValue);
+                    if(cateClass || btnValue == "all") {
+                        $(this).show();
+                    }else {$(this).hide()}
+                })
+                    
+                
+            })
+        }
+        faqfnc();
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url("../../css/common.css");
+
+.main-wrap {
+    padding-top: 12.4rem;
+}
+.main-wrap h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+}
+#both {
+    display: flex;
+    height: 100%;
+    gap: 48px;
+}
+#main-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    flex: 2;
+}
+/* 주문 정보 */
+#prod-info, #delivery-info, #point-info {
+    border-radius: var(--border-radius8);
+    background-color: white;
+    box-shadow: var(--shadow-3);
+    border: 1px solid var(--color-grey-100);
+}
+.view-title {
+    padding: 2.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-grey-200);
+}
+.view-content {
+    background-color: white;
+    padding: 2.4rem;
+}
+#prod-info .view-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.prod-list {
+    display: flex;
+    height: 15.2rem;
+    padding: 3.6rem;
+    background-color: white;
+    border-radius: var(--border-radius8);
+    box-shadow: var(--shadow-3);
+    border: 1px solid var(--color-grey-200);
+}
+.prod-list .info-area {
+    display: flex;
+    gap: 1.6rem;
+    flex: 4;
+}
+.prod-list .info-area p#prod-img {
+    width: 8rem;
+    height: 8rem;
+    background-position: center;
+    background-size: cover;
+}
+.prod-list .info-area p.prod-img1 {
+    background-image: url("../../image/sub/shop/clothes1.png");
+}
+.prod-list .info-area p.prod-img2 {
+    background-image: url("../../image/sub/shop/shop-cart-prod2.png");
+}
+.prod-list .info-area p.prod-img3 {
+    background-image: url("../../image/sub/shop/clothes1.png");
+}
+.prod-list .info-area .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+}
+.prod-list .info-area .info p.option {
+    font-size: 1.4rem;
+    color: var(--font-medium);
+}
+.prod-list .cart-info {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+/* delivery-info */
+#delivery-info .content-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-left: 3.2rem;
+}
+.check-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#input-userinfoChk {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    border-radius: var(--border-radius4);
+}
+#input-userinfoChk + label {
+    font-size: 1.4rem;
+}
+#input-userinfoChk::after {
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../../image/sub/shop/checkbox-chk.png") 100% / cover;
+}
+#input-userinfoChk:checked::after {
+    opacity: 1;
+}
+.input-field {
+    width: 39rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input-field label {
+    font-size: 1.6rem;
+    color: var(--font-medium);
+}
+.input-field input {
+    border: 1px solid var(--color-grey-400);
+    border-radius: var(--border-radius4);
+}
+.input-field input[type="text"] {
+    width: 100%;
+    height: 4rem;
+    padding: 1.2rem;
+}
+.input-field input::placeholder {
+    color: var(--font-desabled);
+}
+.addr-wrap {
+    display: flex;
+    gap: 1.2rem;
+}
+.addr-details {
+    flex-direction: column;
+}
+#search-addr, #btn-use {
+    background-color: var(--color-blue);
+    padding: 1.2rem 2.4rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    height: 4rem;
+}
+/* 포인트 */
+.point-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.point-wrap .input-wrap {
+    display: flex;
+    border-radius: 8px !important;
+    border: 1px solid var(--color-grey-400);
+    overflow: hidden;
+}
+.point-wrap .input-wrap input {
+    border: none;
+}
+#input-point {
+    border-radius: 0px;
+}
+#point-info .input-field {
+    padding-left: 3.2rem;
+    flex-direction: row;
+}
+#priceKRW {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border: none;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 40px;
+}
+.user-point-info {
+    font-size: 1.2rem;
+}
+#user-point {
+    color: var(--color-orange);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+/* 결제 */
+#pay {
+    flex: 1;
+    position: relative;
+}
+#fixed {
+    position: fixed;
+    width: 320px;
+    height: 370px;
+    padding: 32px;
+    box-shadow: var(--shadow-3);
+    border-radius: var(--border-radius8);
+    border: 1px solid var(--color-grey-100);
+}
+#top {
+    border-bottom: 1px solid var(--color-grey-400);
+}
+#top h3 {
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+#middle {
+    padding: 24px 0px;
+    border-bottom: 1px solid var(--color-grey-400);
+}
+#deliver {
+    margin: 16px 0px;
+}
+.middleDisplay {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.mText {
+    color: var(--font-medium);
+}
+
+.mCost {
+    color: var(--font-high);
+}
+
+.mCost strong {
+    color: var(--color-red);
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 24px 0px 32px 0px;
+}
+
+.totalCost {
+    font-size: 1.8rem;
+}
+.totalCost strong {
+    color: var(--color-blue);
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+
+#payBtn {
+    width: 248px;
+    height: 4rem;
+    background: var(--color-blue);
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: var(--border-radius8);
+    cursor: pointer;
+}

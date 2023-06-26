@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 이 문서는 mybatis에서 처리할 SQL문을 작성하는 문서입니다. -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+       "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin">
+
+	
+	<!-- 메인페이지 총 회원수 -->
+	<select id="selectMemberTotalCount" resultType="int">
+		select count(*)-1 from member
+	</select>
+	
+	<!-- 신규 가입 회원수 -->
+	<select id="selectTodayNewMemberCount" resultType="int">
+		select count(*) from member where mm_join_date like sysdate
+	</select>
+	
+	<!-- 신규 신고 접수 -->
+	<select id="selectTodayNewReportCount" resultType="int">
+		select count(*) from report where rp_blacklist = 0 and rp_date like sysdate
+	</select>
+	
+	<!-- 최신 게시글 -->
+	<select id="selectNewPost" resultType="adminVO">
+		SELECT mm_id,
+  		(SELECT mm_nickname FROM MEMBER m WHERE m.mm_id = p.mm_id) mm_nickname,
+  		(SELECT br_name FROM board b WHERE p.br_code = b.br_code) br_name,
+  		ps_subject, ps_content,
+  		(SELECT count(cm_no) FROM "COMMENT" c WHERE p.ps_no = c.ps_no) count_comment
+		FROM (SELECT * FROM
+		(SELECT * FROM post ORDER BY ps_date DESC) p
+		<![CDATA[ WHERE ROWNUM <= 6) p ]]>
+	</select>
+	
+	<!-- 인기 게시글 -->
+	<select id="selectPopularPost" resultType="adminVO">
+		select mm_id,
+		(select mm_nickname from member m where m.mm_id = p.mm_id) mm_nickname,
+		(select br_name from board b where b.br_code = p.br_code) br_name,
+		ps_subject, ps_content,
+		(select count(lk_like) from "LIKE" l where l.ps_no = p.ps_no) like_count
+		from post p
+		<![CDATA[ where rownum <= 11 order by like_count desc ]]>
+	</select>
+	
+	<!-- 신규 회원 -->
+	<select id="selectNewMember" resultType="adminVO">
+		select mm_id, mm_name, mm_mail, mm_tel from member
+		where mm_id not in 'everydang' and
+		<![CDATA[ rownum <= 11 order by mm_join_date desc ]]>
+	</select>
+	
+	<!-- 전체 회원 목록 (페이징) -->
+	<select id="selectAllMemberPerPage" resultType="adminVO" parameterType="map">
+		select A.* from 
+	     (select rownum as rnum , B.* from
+	     (Select mm_id, mm_nickname, mm_name, mm_mail, mm_tel,
+	     (Select gr_name from grade g where g.gr_no = m.gr_no) gr_name,
+	     (Select count(*) from post p where p.mm_id = m.mm_id) post_count,
+	     (Select count(*) from "COMMENT" c where c.mm_id = m.mm_id) comment_count
+	     From member m where mm_id not in 'everydang'
+	     order by mm_join_date desc ) B 
+	     <![CDATA[ where rownum <= #{end}) A
+	     where mm_id not in 'everydang' and A.rnum >= #{start} ]]>
+    </select>
+
+	<!-- 전체 신고 목록 (페이징) -->
+	<!-- 이미 블랙리스트에 등록된 회원에 대한 신고건은 보여주지 않음 -->
+	<select id="selectAllReport" resultType="adminVO" parameterType="map">
+		select A.* from 
+		(select rownum as rnum , B.* from
+		(select rp_no, rp_reporter,
+		rp_defendent,
+		rp_reason1, rp_reason2, rp_file, TRUNC(rp_date, 'DD') rp_date
+		from report
+		where rp_defendent
+		not in
+		(select rp_defendent from report where rp_blacklist = 1)
+		order by rp_date desc ) B 
+		<![CDATA[ where rownum <= #{end}) A
+		where A.rnum >= #{start} ]]>
+	</select>
+	
+	<!-- 총 블랙리스트 등록자 수 -->
+	<select id="selectBlacklistTotalCount" resultType="int">
+		select count(*) from report where rp_blacklist = 1
+	</select>
+	
+	<!-- 전체 블랙리스트 목록 (페이징) -->
+	<select id="selectAllBlacklist" resultType="adminVO" parameterType="map">
+		select A.* from 
+     	(select rownum as rnum , B.* from
+     	(select rp_no, rp_defendent, rp_reason1, rp_reason2, rp_date
+     	from report where rp_blacklist = 1 order by rp_date desc ) B 
+    	<![CDATA[ where rownum <= #{end}) A
+       	where A.rnum >= #{start} ]]>
+	</select>
+	
+	<!-- 신고 철회 -->
+	<delete id="deleteReport" parameterType="String">
+		delete from report where rp_no = #{rp_no}
+	</delete>
+	
+	<!-- 블랙리스트 등록 -->
+	<update id="updateBlacklist" parameterType="String">
+		update report set rp_blacklist = 1 where rp_no = #{rp_no}
+	</update>
+	
+	<!-- 강등 처리 -->
+	<update id="updateDefendentGrade" parameterType="map">
+		UPDATE member
+		SET gr_no = TO_CHAR(TO_NUMBER(
+		(SELECT gr_no FROM member WHERE mm_id =
+		(SELECT rp_defendent FROM report WHERE rp_no = #{rp_no}
+		AND rp_blacklist = 0))) - 1)
+		WHERE mm_id = #{mm_id}
+	</update>
+	
+	<!-- 신고 건수 -->
+	<select id="selectReportCount" resultType="int">
+		SELECT COUNT(*)
+		FROM report
+		WHERE rp_blacklist = 0
+  		AND rp_defendent NOT IN
+  		(SELECT rp_defendent FROM report WHERE rp_blacklist = 1)
+	</select>
+	
+	<!-- 전체 게시글 수 -->
+	<select id="selectPostCount" resultType="int">
+		select count(*) from post where mm_id not in 'everydang'
+	</select>
+	
+	<!-- 전체 게시글 목록 (페이징) -->
+	<select id="selectAllPost" resultType="adminVO" parameterType="map">
+		select A.* from 
+	     (select rownum as rnum , B.* from
+	     (Select ps_no,
+	     (Select br_name from board b where b.br_code = p.br_code) br_name,
+         ps_subject, ps_content, mm_id,
+         (select mm_nickname from member m where m.mm_id = p.mm_id) mm_nickname,
+	     ps_date
+	     From post p
+         where mm_id 
+         not in 'everydang' and mm_id not in
+		 (select rp_defendent from report where rp_blacklist = 1)
+	     order by ps_date desc) B 
+         <![CDATA[ where rownum <= #{end}) A
+	     where mm_id not in 'everydang' and A.rnum >= #{start} ]]>
+	</select>
+	
+	<!-- 선택 게시글 삭제 (1개) -->
+	<delete id="deletePost" parameterType="String">
+		delete from post where ps_no = #{ps_no}
+	</delete>
+	
+	<!-- 선택한 게시글 작성자 블랙리스트 -->
+ 	<insert id="insertBlacklist" parameterType="String">
+		insert into report values ('everydang', #{rp_defendent}, '관리자 권한', null, 1, sysdate, null, report_seq.nextval)
+	</insert>
+	
+	<!-- 전체 댓글 수 -->
+	<select id="selectCommentCount" resultType="int">
+		select count(*) from "COMMENT" where mm_id not in 'everydang'
+	</select>
+	
+	<!-- 전체 댓글 목록 (페이징) -->
+	<select id="selectAllComment" resultType="adminVO" parameterType="map">
+		SELECT A.*
+			FROM (
+    		SELECT ROWNUM AS rnum, B.*
+    	FROM (
+        SELECT
+            c.cm_no, c.cm_content, c.mm_id, c.cm_date,
+            p.ps_subject,
+            b.br_name,
+            m.mm_nickname
+        FROM
+            "COMMENT" c
+            JOIN post p ON c.ps_no = p.ps_no
+            JOIN board b ON p.br_code = b.br_code
+            JOIN member m ON c.mm_id = m.mm_id
+        WHERE
+            c.mm_id NOT IN ('everydang')
+            AND c.mm_id NOT IN (SELECT rp_defendent FROM report WHERE rp_blacklist = 1)
+        ORDER BY
+            c.cm_date DESC
+    	) B
+ 		<![CDATA[   WHERE ROWNUM <= ${end}
+		) A
+		WHERE A.rnum >= ${start} ]]>
+	</select>
+	
+	<!-- 선택 댓글 삭제 (1개) -->
+	<delete id="deleteComment" parameterType="String">
+		delete from "COMMENT" where cm_no = #{cm_no}
+	</delete>
+	
+	<!-- 관리자의 게시글 수 -->
+	<select id="selectMyPostCount" resultType="int" >
+		select count(*) from post where mm_id = 'everydang'
+	</select>
+	
+	<!-- 관리자의 댓글 수 -->
+	<select id="selectMyCommentCount" resultType="int">
+		select count(*) from "COMMENT" where mm_id = 'everydang'
+	</select>
+	
+	<!-- 관리자의 게시글 목록 (페이징) -->
+	<select id="selectAllMyPost" resultType="adminVO" parameterType="map">
+		SELECT A.*
+		FROM (
+		  SELECT ROWNUM AS rnum, B.*
+		  FROM (
+		    SELECT
+		      ps_no,
+		      (SELECT br_name FROM board b WHERE b.br_code = p.br_code) AS br_name,
+		      ps_subject,
+		      ps_content,
+		      ps_date
+		    FROM post p
+		    WHERE mm_id = 'everydang'
+		    ORDER BY ps_date DESC
+		  ) B
+		<![CDATA[  WHERE ROWNUM <= #{end}) A
+		where A.rnum >= #{start} ]]>
+	</select>
+	
+	<!-- 관리자의 댓글 목록 (페이징) -->
+	<select id="selectAllMyComment" resultType="adminVO" parameterType="map">
+		SELECT A.* FROM (
+    		SELECT ROWNUM AS rnum, B.* FROM (
+        	SELECT
+           		c.cm_no,
+            	c.cm_content,
+            	c.cm_date,
+            	p.ps_subject,
+            	b.br_name
+        	FROM
+            	"COMMENT" c
+            	JOIN post p ON c.ps_no = p.ps_no
+            	JOIN board b ON p.br_code = b.br_code
+        	WHERE
+            	c.mm_id = 'everydang'
+        	ORDER BY
+            	c.cm_date DESC) B
+        <![CDATA[  WHERE ROWNUM <= #{end}) A
+		where A.rnum >= #{start} ]]>
+	</select>
+	
+<!-- 	<insert id="insertProduct" parameterType="adminVO">
+		
+	</insert> -->
+	
+	<!-- 전체 리뷰 수 -->
+	<select id="selectReviewCount" resultType="int">
+		SELECT COUNT(*) FROM REVIEW
+	</select>
+	
+	<select id="selectAllReview" resultType="adminVO" parameterType="map">
+		SELECT A.* FROM (
+    		SELECT ROWNUM AS rnum, B.* FROM (
+    		SELECT
+    			rv_no,
+    			(SELECT pr_name FROM product p WHERE p.pr_code = r.pr_code) pr_name,
+    			(SELECT mm_id FROM pay p WHERE p.py_no = r.py_no) mm_id,
+    			rv_star,
+    			rv_content
+    			rv_date
+    		FROM
+    			review r
+    		ORDER BY
+            	rv_date DESC) B
+        <![CDATA[  WHERE ROWNUM <= #{end}) A
+		where A.rnum >= #{start} ]]>
+	</select>
+		
+</mapper>
+
+

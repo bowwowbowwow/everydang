@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <style>
+        #modal-title {
+            flex: 1;
+            text-align: center;
+            font-size: 2rem !important;
+            font-weight: bold;
+        }
+        .modal-body {
+            padding: 0 2.4rem 2.4rem;
+        }
+        .modal-body .modal-body-top {
+            padding: 1.6rem 0;
+            
+        }
+        .modal-body .modal-body-top {
+            border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+        }
+        .modal-body .info{
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+        .modal-body .info #user {
+            font-weight: bold;
+        }
+        .form-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+        }
+        .modal-form ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .modal-form ul li {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        input[type="radio"]{
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        .radio-label {
+            font-size: 1.4rem;
+        }
+        #dec-7-wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #dec-7-wrap > div {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        .textArea-wrap {
+            width: 100%;
+        }
+        .textArea-wrap textarea {
+            height: 8rem;
+            resize: none;
+            border: 1px solid var(--color-grey-400);
+            border-radius: var(--border-radius8);
+            padding: 1.2rem;
+            font-size: 1.2rem;
+        }
+        fieldset {
+            padding: 2.4rem 0;
+            border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+        }
+        #decBtn {
+            width: 100%;
+            height: 4.8rem;
+            font-size: 1.7rem;
+            font-weight: bold;
+            background-color: var(--color-blue);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-title">신고하기</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-top">
+                    <p class="info"><span id="user">홍길동(hong****)</span>님을 신고합니다.</p>
+                </div>
+                <div class="modal-form">
+                    <form action="#">
+                        <fieldset>
+                            <h2 class="form-title">신고사유 선택</h2>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-1">
+                                    <label for="dec-1" class="radio-label">욕설, 비방, 차별 ,혐오</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-2">
+                                    <label for="dec-2" class="radio-label">홍보, 영리목적</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-3">
+                                    <label for="dec-3" class="radio-label">불법 정보</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-4">
+                                    <label for="dec-4" class="radio-label">음란, 청소년 유해</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-5">
+                                    <label for="dec-5" class="radio-label">개인 정보 노출, 유포, 거래</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="declaration" class="declaration" id="dec-6">
+                                    <label for="dec-6" class="radio-label">도배, 스팸</label>
+                                </li>
+                                <li id="dec-7-wrap">
+                                    <div>
+                                        <input type="radio" name="declaration" class="declaration" id="dec-7">
+                                        <label for="dec-7" class="radio-label">기타</label>
+                                    </div>
+                                    <div class="textArea-wrap">
+                                        <textarea name="textArea" id="textArea" style="width: 100%;" placeholder="신고 사유 직접 입력 (최대 100자)"></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <div class="file-top">
+                                <h2 class="form-title">첨부파일</h2>
+                                <input type="file" name="decFile" id="dec-file">
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="btn-wrap">
+                        <button type="submit" class="btn btn-primary" id="decBtn">신고하기</button>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

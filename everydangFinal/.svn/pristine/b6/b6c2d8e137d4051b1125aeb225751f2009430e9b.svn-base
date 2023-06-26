@@ -1,0 +1,41 @@
+package com.everydang.member.sevice;
+
+import com.everydang.member.dao.IMemberDAO;
+import com.everydang.member.dao.MemberDAO;
+import com.everydang.vo.MemberVO;
+
+public class MemberService implements IMemberService {
+
+	private IMemberDAO dao;
+	private static IMemberService service;
+	
+	private MemberService() {
+		dao = MemberDAO.getInstance();
+	}
+	
+	public static IMemberService getInstance() {
+		if(service == null) {
+			service = new MemberService();
+		}
+		return service;
+	}
+	
+	@Override
+	public int insertJoinInformation(MemberVO membervo) {
+
+		return dao.insertJoinInformation(membervo);
+	}
+
+	@Override
+	public String selectCheckId(String id) {
+
+		return dao.selectCheckId(id);
+	}
+
+	@Override
+	public String selectcheckNickname(String nickname) {
+
+		return dao.selectcheckNickname(nickname);
+	}
+
+}

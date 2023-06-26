@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url("../../css/common.css");
+
+:root {
+    /* bg */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg1: #f5f5f5;
+
+    /* color */
+    --color-red: #F3A092;
+    --color-orange: #F3A092;
+    --color-purple: #E0CCE7;
+    --color-blue : #61BBB9;
+    --color-green : #7DC384;
+
+    --color-grey-100 : #F5F5F5;
+    --color-grey-200 : #EEEEEE;
+    --color-grey-300 : #E0E0E0;
+    --color-grey-400 : #BDBDBD;
+    --color-grey-500 : #9E9E9E;
+    --color-grey-600 : #757575;
+    --color-grey-700 : #616161;
+    --color-grey-800 : #424242;
+    --color-grey-900 : #212121;
+
+    /* font */
+    --font-size: 10px;
+    --font-high: #131313;
+    --font-medium: #7d7d7d;
+    --font-desabled: #D9D9D9;
+
+    /* border-radius */
+    --border-radius12 : 12px;
+    --border-radius8: 8px;
+    --border-radius4: 4px;
+    --border-radiusround: 50%;
+
+    /* shadow */
+    --shadow-1 : 1px 3px 10px rgba(217, 217, 217, 0.5);
+    --shadow-2 : -4px -3px 6px rgba(228, 228, 228, 0.25), 4px 4px 6px rgba(217, 217, 217, 0.23);
+    --shadow-3 : 0px 0px 30px rgba(195, 206, 206, 0.15);
+
+}
+#wrap {
+    background-color: var(--color-bg1);
+}
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.6rem;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+}
+.main-wrap  div.logo-area {
+    margin-top: -66px;
+}
+.main-wrap  div.logo-area img {
+    object-fit: contain;
+    width: 20.6rem;
+    height: 20.6rem;
+}
+.main-wrap p {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.btn-wrap {
+    display: flex;
+    gap: 2.4rem;
+}
+.btn {
+    width: 18rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    border-radius: var(--border-radius8);
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .35s;
+}
+.btn-main {
+    background-color: white;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+}
+.btn-main:hover {
+    background-color: var(--color-blue);
+    color: white;
+}
+.btn-info {
+    background-color: var(--color-blue);
+    color: white;
+}
+.btn-info:hover {
+    opacity: 0.8;
+}
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>글수정 | 공지사항</title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/board/postWrite.css">
+    <script type="text/javascript" src="<%=request.getContextPath()%>/sub/smarteditor2-2.9.2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+    <script src="<%= request.getContextPath() %>/js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <div id="category">
+                <p>공지사항 글 수정</p>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div id="writeForm">
+                    <div id="subjectbox">
+                        <label for="subject">제목</label><br>
+                        <input type="text" name="subject" id="subject" placeholder="제목을 입력하세요.">
+                    </div>
+                    <div id="contentBox">
+                        <label for="content">본문</label><br>
+                        <textarea id="txtContent" rows="10" cols="100" style="width: 100%;"></textarea>
+                    </div>
+                    <div id="buttonBox">
+                        <input type="button" value="취소" id="cancel" name="cancel">
+                        <input type="button" value="수정" id="submit" name="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        $(function () {
+            $("#header").load("<%= request.getContextPath() %>/header.jsp");
+            $("#footer").load("<%= request.getContextPath() %>/footer.jsp");
+        })
+
+        var oEditors = [];
+        nhn.husky.EZCreator.createInIFrame({
+            oAppRef: oEditors,
+            elPlaceHolder: "txtContent",  //textarea ID 입력
+            sSkinURI: "<%=request.getContextPath()%>/sub/smarteditor2-2.9.2/SmartEditor2Skin.html",  //martEditor2Skin.html 경로 입력
+            fCreator: "createSEditor2",
+            htParams: {
+                // 툴바 사용 여부 (true:사용/ false:사용하지 않음) 
+                bUseToolbar: true,
+                // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음) 
+                bUseVerticalResizer: false,
+                // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음) 
+                bUseModeChanger: false
+            }
+        });
+
+        $("#cancel").on("click", function () {
+            history.back();
+        });
+    </script>
+</body>
+
+</html>

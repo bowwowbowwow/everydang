@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위시리스트 | 에브리띵</title>
+    <link rel="icon" href="/everydang/assets/favicon.ico">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/everything/everythingWish.css">
+    <script src="<%=request.getContextPath()%>/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="wrap">
+        <div id="container">
+            <!-- 탭 -->
+            <div id="tabBox">
+                <div id="tabSub">
+                    <a href="<%=request.getContextPath()%>/sub/everything/everythingCart.jsp" class="btnLeft tab">
+                        <p id="cartTab">장바구니</p>
+                    </a>
+                    <a href="<%=request.getContextPath()%>/sub/everything/everythingWish.jsp" class="btnRight tab selected">
+                        <p id="wishTab">위시리스트</p>
+                    </a>
+                </div>
+            </div>
+            <div id="wishlistBox">
+                <div class="wishRow">
+                    <div class="wishItem">
+                        <button class="x"></button>
+                        <a href="#">
+                            <img src="<%=request.getContextPath()%>/image/sub/shop/shop-wish-prod5.png" alt="item1">
+                        </a>
+                        <span class="hot hotItem">HOT</span>
+                        <p class="itemTitle">강아지 인형 VER1 - 강아지</p>
+                        <p class="itmePrice">36,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        // header & footer
+        $("#header").load("<%=request.getContextPath()%>/header.jsp");
+        $("#footer").load("<%=request.getContextPath()%>/footer.jsp");
+    </script>
+</body>
+</html>

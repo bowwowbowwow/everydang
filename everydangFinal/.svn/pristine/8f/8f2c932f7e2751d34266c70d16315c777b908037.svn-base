@@ -1,0 +1,23 @@
+package com.everydang.vo;
+
+public class OptionVO {
+	private String pr_code;
+	private String op_name;
+
+	public String getPr_code() {
+		return pr_code;
+	}
+
+	public void setPr_code(String pr_code) {
+		this.pr_code = pr_code;
+	}
+
+	public String getOp_name() {
+		return op_name;
+	}
+
+	public void setOp_name(String op_name) {
+		this.op_name = op_name;
+	}
+
+}
